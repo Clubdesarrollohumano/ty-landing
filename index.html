@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T&Y — Ella recibe cientos de mensajes. El tuyo será el único que importe.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#161310; --bg-soft:#1e1a16; --ink:#ece5d8; --muted:#a19583;
+  --accent:#c9a15f; --accent-ink:#dcb76f; --line:#332c24;
+  --card:#211c17; --light:#f5efe4; --light-text:#241c15; --light-muted:#6f6257;
+  --wine:#7d2e3f;
+  --serif:"Fraunces",Georgia,serif; --sans:"Instrument Sans",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+::selection{background:var(--accent);color:#161310}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ---------- header ---------- */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-size:26px;font-weight:600;letter-spacing:.02em;text-decoration:none}
+.brand em{font-style:normal;color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:22px;font-size:14px}
+.switch{color:var(--muted);text-decoration:none;border-bottom:1px solid transparent;transition:.2s}
+.switch:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- hero ---------- */
+.hero{padding:96px 0 84px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border:1px solid var(--line);border-radius:50%;pointer-events:none}
+.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:360px;height:360px;border:1px solid var(--line);border-radius:50%;pointer-events:none}
+.kicker{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:22px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6.4vw,72px);line-height:1.06;letter-spacing:-.01em;max-width:15ch;color:var(--ink)}
+h1 strong{font-weight:600;color:var(--accent)}
+.hero p.lede{margin-top:26px;font-size:19px;color:var(--muted);max-width:52ch}
+.cta-row{margin-top:38px;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 34px;background:var(--accent);color:#161310;font-family:var(--sans);font-size:16px;font-weight:600;text-decoration:none;border-radius:2px;transition:background .2s,transform .15s}
+.btn:hover{background:var(--accent-ink)}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid #fff;outline-offset:2px}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+.microtrust{margin-top:16px;font-size:13.5px;color:var(--muted)}
+
+/* ---------- section base ---------- */
+section{padding:84px 0}
+.sec-label{font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,44px);line-height:1.12;max-width:24ch}
+
+/* ---------- editorial numbered blocks ---------- */
+.blocks{margin-top:56px;border-top:1px solid var(--line)}
+.block{display:grid;grid-template-columns:110px 1fr;gap:34px;padding:44px 0;border-bottom:1px solid var(--line)}
+.block .num{font-family:var(--serif);font-size:46px;font-weight:300;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums}
+.block h3{font-family:var(--serif);font-size:26px;font-weight:500;line-height:1.2;margin-bottom:12px;max-width:28ch}
+.block p{color:var(--muted);max-width:58ch}
+.block p strong{color:var(--ink);font-weight:600}
+
+/* ---------- light band: proceso ---------- */
+.light{background:var(--light);color:var(--light-text)}
+.light .sec-label{color:var(--wine)}
+.light h2{color:var(--light-text)}
+.light p.lede{color:var(--light-muted);margin-top:14px;max-width:52ch}
+.guards{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid #ddd2c0}
+.guard{padding:30px 32px;border-bottom:1px solid #ddd2c0;background:#fbf7ef}
+.guard:nth-child(odd){border-right:1px solid #ddd2c0}
+.guard:nth-last-child(-n+2){border-bottom:none}
+.guard h4{font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:8px;color:var(--light-text)}
+.guard h4::before{content:"— ";color:var(--wine)}
+.guard p{font-size:15px;color:var(--light-muted)}
+
+/* ---------- transversal: pull quotes ---------- */
+.quotes{background:var(--bg-soft)}
+.quote{max-width:760px;margin:0 auto;padding:36px 0;text-align:left;border-bottom:1px solid var(--line)}
+.quote:last-child{border-bottom:none}
+.quote p{font-family:var(--serif);font-size:clamp(21px,2.6vw,27px);line-height:1.4;font-weight:400}
+.quote p em{color:var(--accent);font-style:italic}
+.quote .why{font-family:var(--sans);font-size:15px;color:var(--muted);margin-top:12px;max-width:60ch}
+
+/* ---------- cómo funciona ---------- */
+.steps{margin-top:52px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:step}
+.step{padding:28px 26px 30px;border-top:2px solid var(--accent);position:relative}
+.step+.step{margin-left:22px}
+.step::before{counter-increment:step;content:"0" counter(step);font-family:var(--serif);font-size:15px;color:var(--accent);font-weight:600;letter-spacing:.08em}
+.step h4{font-family:var(--serif);font-size:20px;font-weight:500;margin:12px 0 8px}
+.step p{font-size:14.5px;color:var(--muted)}
+
+/* ---------- numerología ---------- */
+.numero .inner{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.big7{font-family:var(--serif);font-size:clamp(90px,14vw,170px);font-weight:300;line-height:.9;color:var(--accent);font-variant-numeric:tabular-nums}
+.big7-label{margin-top:10px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.numero p{color:var(--muted);margin-top:18px;max-width:46ch}
+.numero p strong{color:var(--ink)}
+
+/* ---------- garantía ---------- */
+.guarantee{border:1px solid var(--line);background:var(--card);padding:44px 48px;display:grid;grid-template-columns:1fr auto;gap:36px;align-items:center}
+.guarantee h2{font-size:clamp(24px,3vw,32px)}
+.guarantee p{color:var(--muted);margin-top:12px;max-width:56ch}
+.guarantee p strong{color:var(--ink)}
+.badge-g{font-family:var(--serif);font-size:44px;color:var(--accent);white-space:nowrap;border-left:1px solid var(--line);padding-left:40px}
+
+/* ---------- final CTA ---------- */
+.final{background:var(--accent);color:#161310;text-align:center}
+.final h2{margin:0 auto;max-width:20ch;color:#161310}
+.final .sec-label{color:var(--wine)}
+.final p{color:#4a3a26;margin:18px auto 0;max-width:50ch}
+.form{margin:36px auto 0;display:flex;gap:12px;max-width:520px;flex-wrap:wrap;justify-content:center}
+.form input{flex:1;min-width:240px;min-height:52px;padding:0 18px;font-family:var(--sans);font-size:16px;background:transparent;color:#161310;border:1px solid #16131033;border-radius:2px}
+.form input::placeholder{color:#4a3a26}
+.form input:focus-visible{outline:2px solid #161310;outline-offset:2px}
+.form .btn{background:#161310;color:var(--accent)}
+.form .btn:hover{background:#2a241c}
+.final .microtrust{color:#4a3a26}
+
+/* ---------- footer ---------- */
+footer{background:var(--bg);color:var(--muted);border-top:1px solid var(--line);padding:34px 0;font-size:13.5px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .block{grid-template-columns:1fr;gap:8px;padding:34px 0}
+  .block .num{font-size:32px}
+  .guards{grid-template-columns:1fr}
+  .guard:nth-child(odd){border-right:none}
+  .guard:nth-last-child(-n+2){border-bottom:1px solid #ddd2c0}
+  .guard:last-child{border-bottom:none}
+  .steps{grid-template-columns:1fr 1fr;gap:26px}
+  .step+.step{margin-left:0}
+  .numero .inner{grid-template-columns:1fr;gap:36px}
+  .guarantee{grid-template-columns:1fr;padding:34px 28px}
+  .badge-g{border-left:none;padding-left:0}
+  .hero::after,.hero::before{display:none}
+  section{padding:64px 0}
+}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#">T<em>&amp;</em>Y</a>
+    <div class="nav-right">
+      <span>Agencia matrimonial moderna</span>
+      <a class="switch" href="mujeres.html">Soy mujer →</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="wrap">
+    <p class="kicker rv">Para hombres que buscan una relación estable</p>
+    <h1 class="rv">Ella recibe cientos de mensajes. <strong>El tuyo será el único que importe.</strong></h1>
+    <p class="lede rv">En las otras apps compites contra todos. Aquí no compites: muéstrate tal como eres y nosotros hacemos el trabajo por ti.</p>
+    <div class="cta-row rv">
+      <a class="btn" href="#empezar">Empezar mi cuestionario</a>
+      <a class="btn ghost" href="#como">Cómo funciona</a>
+    </div>
+    <p class="microtrust rv">Sin competir por atención · Tu compatibilidad demostrada antes de la primera palabra</p>
+  </div>
+</div>
+
+<!-- BLOQUES DE MENSAJE -->
+<section>
+  <div class="wrap">
+    <p class="sec-label rv">Lo que a ti te cuesta</p>
+    <h2 class="rv">Nueve verdades sobre por qué las otras apps de citas no funcionan para quienes quieren una relación estable sin tanta fricción</h2>
+    <div class="blocks">
+      <article class="block rv">
+        <div class="num">01</div>
+        <div>
+          <h3>Deja de gritar en una sala llena.</h3>
+          <p>En las apps donde todo se decide deslizando una foto, el hombre serio es invisible. Aquí no hace falta «venderse»: <strong>tu cuestionario habla por ti</strong> — tus valores, tu estabilidad, cómo tratas a una pareja.</p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">02</div>
+        <div>
+          <h3>Dejas de escribir en el vacío.</h3>
+          <p>Pasas horas escribiendo a mujeres que tienen cientos de pretendientes y no leen ni la mitad. Podrías ser el candidato ideal de alguna de ellas… que jamás abrirá tu mensaje. Aquí no compites por atención: <strong>tu compatibilidad ya está demostrada antes de la primera palabra.</strong></p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">03</div>
+        <div>
+          <h3>Tu vida real vale más que tus fotos.</h3>
+          <p>Ya no necesitas el álbum perfecto de «estilo de vida»: moto, viaje, traje. Eso dice cómo quieres verte, no cómo eres. Lo que aquí ven de ti es <strong>lo que de verdad retiene a una mujer seria</strong>: cómo pelea, cómo pide perdón, si cumple lo que promete, qué quiere para los próximos 5 años.</p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">04</div>
+        <div>
+          <h3>Tu estatus no te expone.</h3>
+          <p>Si tienes buen nivel económico, en las otras apps te eligen por eso — o te escondes para evitarlo. <strong>Aquí nadie ve tu bolsillo hasta que la compatibilidad real está demostrada: quien te elige, te elige a ti.</strong></p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">05</div>
+        <div>
+          <h3>No buscas a una mujer que reclame. Buscas a la que te impulsa.</h3>
+          <p>Estás trabajando para mejorar tu vida, para crecer económicamente. La mujer indicada no te frena: te apoya para que sigas avanzando, desde la confianza y la admiración. Cuando ella es tu verdadera compañera leal, <strong>te inspira a mover cielo y tierra para construir una vida juntos.</strong></p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">06</div>
+        <div>
+          <h3>Todas se venden bien al principio.</h3>
+          <p>Conocer el fondo de alguien en conversación es casi imposible cuando ambas partes ponen su mejor versión. <strong>Aquí el fondo lo muestra un cuestionario serio</strong> — valores, apego, dinero, familia, fe — antes de que ninguna de las dos pueda «venderse».</p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">07</div>
+        <div>
+          <h3>Conversaciones eternas que no llevan a nada, no.</h3>
+          <p>Hombres y mujeres están cansados de semanas de chat con personas que nunca fueron adecuadas. Aquí la conversación empieza donde debía empezar: <strong>ya sabiendo que son compatibles en lo que sostiene una vida en común.</strong></p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">08</div>
+        <div>
+          <h3>Esto no es un juego: es una inversión de 3 a 6 meses para no perder 5 años.</h3>
+          <p>Como una agencia matrimonial moderna: <strong>cuestionario profundo + compatibilidad medida + acompañamiento.</strong> No venimos a entretener: venimos a que elijas bien.</p>
+        </div>
+      </article>
+      <article class="block rv">
+        <div class="num">09</div>
+        <div>
+          <h3>Sí queremos invitar a cenar. A la mujer adecuada.</h3>
+          <p>Los hombres sí quieren ser caballerosos y pagar una cena o una salida — pero no cada semana con una interesada diferente. <strong>Eso se hace con la mujer adecuada: la que también está interesada en ti</strong>, no solo en pasarla bien.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESO / VENTAJA -->
+<section class="light">
+  <div class="wrap">
+    <p class="sec-label rv">Tu ventaja competitiva</p>
+    <h2 class="rv">Aquí tu seriedad es ventaja, no lastre</h2>
+    <p class="lede rv">El mercado de las apps está diseñado para el entretenimiento. T&amp;Y está diseñado para gente como tú: la que quiere construir, no coleccionar.</p>
+    <div class="guards rv">
+      <div class="guard">
+        <h4>Pocas candidaturas, de verdad</h4>
+        <p>No 40 matches muertos: 3–5 candidatas compatibles que también buscan una relación estable. Cada conversación cuenta.</p>
+      </div>
+      <div class="guard">
+        <h4>Tu esfuerzo pesa más que tu foto</h4>
+        <p>Ellas ven tu compatibilidad real: carácter, forma de enfrentarse a los problemas, proyectos, cómo eres con el dinero y con los tuyos.</p>
+      </div>
+      <div class="guard">
+        <h4>Verificación para todos</h4>
+        <p>Identidad real con video en vivo y reto aleatorio. Sin catfish, sin cuentas falsas — ni para ellas, ni para ti.</p>
+      </div>
+      <div class="guard">
+        <h4>Sin quemar dinero en el vacío</h4>
+        <p>Aquí no pagas por aparecer más ni por enviar super-likes al azar. Pagas por conocer — y con garantía.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSVERSALES -->
+<section class="quotes">
+  <div class="wrap">
+    <p class="sec-label rv" style="text-align:center">Por qué existe T&amp;Y</p>
+    <div class="quote rv">
+      <p>«Filtramos mal. Y nos cuesta <em>años</em>.»</p>
+      <p class="why">Por pasión, por atracción, por carencias… o porque nos recuerda a una relación pasada. Desechamos sin conocer y probamos con quien desde el principio no tenía ninguna opción de salir bien. Aquí el filtro no lo pone la química de una foto: lo pone tu criterio real, traducido a datos.</p>
+    </div>
+    <div class="quote rv">
+      <p>«¿Merece la pena conocer a fondo a <em>esta</em> persona?»</p>
+      <p class="why">Esa pregunta — la que nunca sabemos responder a tiempo — aquí tiene respuesta medible: compatibilidad en valores, forma de pelear, dinero, hijos, fe, intimidad. Sabes cuándo invertir en profundidad y cuándo no.</p>
+    </div>
+    <div class="quote rv">
+      <p>«Menos opciones. <em>Las correctas.</em>»</p>
+      <p class="why">No venimos a darte 40 matches muertos: venimos a darte pocas candidaturas — las que aguantan un examen serio de vida en común.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CÓMO FUNCIONA -->
+<section id="como">
+  <div class="wrap">
+    <p class="sec-label rv">Cómo funciona</p>
+    <h2 class="rv">Un proceso de 3 a 6 meses para no perder 5 años</h2>
+    <div class="steps rv">
+      <div class="step">
+        <h4>Conversas en serio</h4>
+        <p>Cuatro conversaciones profundas con nuestra IA — por voz, a tu ritmo, pausables cuando quieras. Tu cuestionario habla por ti.</p>
+      </div>
+      <div class="step">
+        <h4>Ves pocas candidaturas</h4>
+        <p>Solo mujeres compatibles contigo en lo que de verdad sostiene una vida en común, verificadas y con tu mismo nivel de seriedad.</p>
+      </div>
+      <div class="step">
+        <h4>Interés mutuo</h4>
+        <p>Tú avisas a quien te interese conocer más. Si ella también, se abren las puertas a conocerse de verdad.</p>
+      </div>
+      <div class="step">
+        <h4>Decides con fundamento</h4>
+        <p>Antes de invertir tu tiempo, sabes si vale la pena. Y si formas pareja, te acompañamos para construirla bien desde el inicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMEROLOGÍA -->
+<section class="numero" style="background:var(--bg-soft)">
+  <div class="wrap inner">
+    <div class="rv">
+      <div class="big7">7</div>
+      <p class="big7-label">dimensiones del informe numerológico del par</p>
+    </div>
+    <div>
+      <p class="sec-label rv">Nuestro diferencial</p>
+      <h2 class="rv">Numerología de pareja, como informe de primera clase</h2>
+      <p class="rv">Al completar tu perfil desbloqueas el <strong>informe de compatibilidad numerológica del par</strong>: siete dimensiones — caminos de vida, almas, personalidades, misiones, vibración caldea, karmas y momento actual — más manuales prácticos para la convivencia.</p>
+      <p class="rv">No lo escondemos: para nosotros es una herramienta más para conocerte y elegir mejor.</p>
+    </div>
+  </div>
+</section>
+
+<!-- GARANTÍA -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="guarantee rv">
+      <div>
+        <h2>Nuestra garantía de compatibilidad</h2>
+        <p>Si durante tu periodo de suscripción no recibes al menos <strong>una compatibilidad del 65% o superior</strong>, te regalamos el siguiente periodo. <strong>No pagas por esperar.</strong></p>
+      </div>
+      <div class="badge-g">≥65%</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final" id="empezar">
+  <div class="wrap">
+    <p class="sec-label rv">Lista de espera por ciudad</p>
+    <h2 class="rv">Ella está aquí, buscando a alguien como tú.</h2>
+    <p class="rv">T&amp;Y abre por ciudades, con densidad real de gente compatible antes de activar los matches. Déjanos tu correo y te avisamos cuando tu ciudad esté lista.</p>
+    <form class="form rv" onsubmit="event.preventDefault();this.innerHTML='<p style=\'color:#161310;font-weight:600\'>✓ Estás en la lista. Te avisaremos.</p>'">
+      <input type="email" required placeholder="tu@correo.com" aria-label="Correo electrónico">
+      <button class="btn" type="submit">Empezar mi cuestionario</button>
+    </form>
+    <p class="microtrust rv">Sin spam. Un solo aviso cuando tu ciudad abra.</p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 T&amp;Y — la agencia matrimonial moderna.</span>
+    <span><a href="#">Términos</a> · <a href="#">Privacidad</a> · <a href="mujeres.html">Landing para mujeres</a></span>
+  </div>
+</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
