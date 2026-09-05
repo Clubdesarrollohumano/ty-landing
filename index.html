@@ -6,7 +6,7 @@
 <title>T&Y — Ella recibe cientos de mensajes. El tuyo será el único que importe.</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#161310; --bg-soft:#1e1a16; --ink:#ece5d8; --muted:#a19583;
@@ -144,6 +144,12 @@ footer a{color:var(--muted)}
   section{padding:64px 0}
 }
 @media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- identidad: voz display Cinzel (ver IDENTIDAD_VISUAL_MARCA.md) ---------- */
+:root{--display:"Cinzel",Georgia,serif}
+.kicker,.sec-label,.big7-label,.step::before,.badge-g{font-family:var(--display);font-weight:500}
+.big7{font-family:var(--display);font-weight:400}
+@media (max-width:860px){.badge-g{font-family:var(--display);font-weight:500}}
 </style>
 </head>
 <body>
