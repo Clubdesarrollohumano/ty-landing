@@ -112,6 +112,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 footer a{color:var(--muted);text-decoration:none}
 footer a:hover{color:var(--accent)}
 
+/* hero: emblema de marca + composición centrada */
+.hero{text-align:center}
+.hero-logo{display:block;margin:0 0 10px}
+.hero-logo img{display:block;height:clamp(120px,15vw,200px);width:auto;margin:0 auto;filter:drop-shadow(0 8px 26px rgba(0,0,0,.4))}
+.hero .kicker{text-align:center}
+.hero h1{margin:0 auto}
+.hero p.lede{margin:26px auto 0;text-align:center}
+.hero .cta-row{justify-content:center}
+.hero .microtrust{text-align:center}
+@media (max-width:860px){.hero-logo img{height:clamp(92px,26vw,150px)}}
+
 .rv{transform:translateY(14px);transition:transform .7s ease}
 .rv.in{transform:none}
 @media (prefers-reduced-motion:reduce){.rv{transform:none;transition:none}html{scroll-behavior:auto}}
@@ -151,6 +162,7 @@ footer a:hover{color:var(--accent)}
 <!-- HERO -->
 <div class="hero">
   <div class="wrap">
+    <div class="hero-logo rv"><img src="TY_logo_negro_transparente.png" alt="T&amp;Y — Match Beyond Love"></div>
     <p class="kicker rv">Para hombres que buscan una relación estable</p>
     <h1 class="rv">Ella recibe cientos de mensajes. <strong>El tuyo será el único que importe.</strong></h1>
     <p class="lede rv">En las otras apps compites contra todos. Aquí no compites: muéstrate tal como eres y nosotros hacemos el trabajo por ti.</p>
