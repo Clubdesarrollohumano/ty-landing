@@ -127,6 +127,15 @@ footer a:hover{color:var(--accent)}
 .hero .microtrust{text-align:center}
 @media (max-width:860px){.hero-logo img{height:clamp(92px,26vw,150px)}}
 
+/* bandas emocionales (fotografía) */
+.scen{position:relative;margin:0;border-radius:8px;overflow:hidden;
+  border:1px solid rgba(205,152,131,.30);
+  box-shadow:0 44px 90px -42px rgba(0,0,0,.92)}
+.scen img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
+.scen::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(125% 95% at 50% 6%,transparent 58%,rgba(11,10,14,.45) 100%)}
+.scen-after{margin-top:10px}
+
 .rv{transform:translateY(14px);transition:transform .7s ease}
 .rv.in{transform:none}
 @media (prefers-reduced-motion:reduce){.rv{transform:none;transition:none}html{scroll-behavior:auto}}
@@ -242,6 +251,10 @@ footer a:hover{color:var(--accent)}
         </div>
       </article>
     </div>
+
+    <figure class="scen rv scen-after">
+      <img src="hombres_01_certeza.jpg" alt="Una pareja que se ríe de verdad a la luz de las velas: lo que se construye con la mujer adecuada." loading="lazy" width="1536" height="1024">
+    </figure>
   </div>
 </section>
 
@@ -343,6 +356,15 @@ footer a:hover{color:var(--accent)}
       </div>
       <div class="badge-g">≥65%</div>
     </div>
+  </div>
+</section>
+
+<!-- BANDA EMOCIONAL FINAL: caminar con la adecuada -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <figure class="scen rv">
+      <img src="hombres_02_noche.jpg" alt="Una pareja elegante camina junta hacia la noche; él la acompaña con la mano en su espalda." loading="lazy" width="1536" height="1024">
+    </figure>
   </div>
 </section>
 
