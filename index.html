@@ -127,16 +127,14 @@ footer a:hover{color:var(--accent)}
 .hero .microtrust{text-align:center}
 @media (max-width:860px){.hero-logo img{height:clamp(92px,26vw,150px)}}
 
-/* bandas emocionales (fotografía) */
-.scen{position:relative;margin:0;border-radius:8px;overflow:hidden;
-  border:1px solid rgba(205,152,131,.30);
-  box-shadow:0 44px 90px -42px rgba(0,0,0,.92)}
-.scen img{display:block;width:100%;aspect-ratio:3/2;object-fit:cover}
-.scen::after{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(125% 95% at 50% 6%,transparent 58%,rgba(11,10,14,.45) 100%)}
-.scen-after{margin-top:10px}
-
-@media (min-width:861px){.scen{max-width:60%;margin-left:auto;margin-right:auto}}
+/* bandas emocionales cinematográficas a ancho completo */
+.filmwrap{padding:0}
+.film{position:relative;margin:0;overflow:hidden;
+  border-top:1px solid rgba(205,152,131,.28);border-bottom:1px solid rgba(205,152,131,.28);
+  box-shadow:0 34px 80px -50px rgba(0,0,0,.95)}
+.film img{display:block;width:100%;height:clamp(190px,36vw,430px);object-fit:cover;object-position:center 42%}
+.film::after{content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg,rgba(11,10,14,.28),transparent 24%,transparent 76%,rgba(11,10,14,.4))}
 
 .rv{transform:translateY(14px);transition:transform .7s ease}
 .rv.in{transform:none}
@@ -253,12 +251,13 @@ footer a:hover{color:var(--accent)}
         </div>
       </article>
     </div>
-
-    <figure class="scen rv scen-after">
-      <img src="hombres_01_certeza.jpg" alt="Una pareja que se ríe de verdad a la luz de las velas: lo que se construye con la mujer adecuada." loading="lazy" width="1536" height="1024">
-    </figure>
   </div>
 </section>
+
+<!-- BANDA EMOCIONAL 1: la cena con la adecuada -->
+<section class="filmwrap"><figure class="film rv">
+  <img src="hombres_01_certeza.jpg" alt="Una pareja que se ríe de verdad a la luz de las velas: lo que se construye con la mujer adecuada." loading="lazy">
+</figure></section>
 
 <!-- PROCESO / VENTAJA -->
 <section class="light">
@@ -362,13 +361,9 @@ footer a:hover{color:var(--accent)}
 </section>
 
 <!-- BANDA EMOCIONAL FINAL: caminar con la adecuada -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <figure class="scen rv">
-      <img src="hombres_02_noche.jpg" alt="Una pareja elegante camina junta hacia la noche; él la acompaña con la mano en su espalda." loading="lazy" width="1536" height="1024">
-    </figure>
-  </div>
-</section>
+<section class="filmwrap"><figure class="film rv">
+  <img src="hombres_02_noche.jpg" alt="Una pareja elegante camina junta hacia la noche; él la acompaña con la mano en su espalda." loading="lazy">
+</figure></section>
 
 <!-- FINAL CTA -->
 <section class="final" id="empezar">
