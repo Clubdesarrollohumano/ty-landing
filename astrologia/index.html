@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T&Y — Compatibilidad védica · Javier & Yudy</title>
+<meta name="description" content="Estudio de compatibilidad de pareja por astrología védica (Jyotish): Ashtakoota, nueve aspectos del vínculo, sinastría y períodos. Javier & Yudy.">
+<meta property="og:title" content="T&Y — Compatibilidad védica · Javier & Yudy">
+<meta property="og:description" content="Línea base védica 28/36. Diagnóstico completo de nueve aspectos, sinastría y timing de dashas.">
+<meta property="og:image" content="https://clubdesarrollohumano.github.io/ty-landing/og-mujeres.png">
+<meta property="twitter:card" content="summary_large_image">
+<link rel="icon" href="../favicon-64.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2C0A3E; --plum-light:#4A0E5C; --noir:#0B0A0C;
+  --champagne:#F2D2BE; --rose:#C99480; --bronze:#8A5A41; --copper:#5E3322;
+  --ink:#221b16; --muted:#6f6257; --card:#fffdf9; --bg:#faf6f0;
+  --line:#e2d8c9;
+  --display:"Cinzel",serif; --serif:"Fraunces",Georgia,serif; --sans:"Instrument Sans",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 32px}
+::selection{background:var(--rose);color:#fff}
+
+/* ── hero ciruela ── */
+.plum-hero{position:relative;color:var(--champagne);overflow:hidden;
+  background:radial-gradient(ellipse 120% 90% at 50% 12%, var(--plum) 0%, #1c0624 52%, var(--noir) 100%);
+  padding:88px 0 104px;text-align:center}
+.plum-hero::before,.plum-hero::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(242,210,190,.16);pointer-events:none}
+.plum-hero::before{width:640px;height:640px;left:50%;top:-160px;transform:translateX(-50%)}
+.plum-hero::after{width:940px;height:940px;left:50%;top:-90px;transform:translateX(-50%)}
+.brand{font-family:var(--display);font-size:26px;letter-spacing:.34em;font-weight:600;color:var(--champagne);text-shadow:0 1px 18px rgba(242,210,190,.22)}
+.brand .amp{color:var(--rose)}
+.logo-wrap{position:relative;width:min(210px,60vw);margin:34px auto 0;display:block}
+.logo-wrap .hero-logo{width:100%;filter:drop-shadow(0 10px 26px rgba(0,0,0,.5));animation:logoFloat 6.5s ease-in-out infinite}
+.logo-wrap .sheen{position:absolute;inset:0;pointer-events:none;
+  -webkit-mask-image:url("ty-logo-ciruela.png");mask-image:url("ty-logo-ciruela.png");
+  -webkit-mask-size:100% auto;mask-size:100% auto;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,0) 40%,rgba(255,244,230,.85) 49%,rgba(255,255,255,0) 58%,transparent 68%);
+  background-size:250% 100%;background-repeat:no-repeat;background-position:-160% 0;
+  mix-blend-mode:screen;animation:logoSheen 7s ease-in-out 1.2s infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes logoSheen{0%{background-position:-170% 0}55%{background-position:170% 0}100%{background-position:170% 0}}
+@media (prefers-reduced-motion:reduce){.logo-wrap .hero-logo,.logo-wrap .sheen{animation:none}.logo-wrap .sheen{background:none}}
+.tagline{display:inline-flex;align-items:center;gap:18px;margin-top:14px}
+.tagline .filete{width:44px;height:1px;background:linear-gradient(90deg,transparent,var(--rose))}
+.tagline .filete.r{background:linear-gradient(90deg,var(--rose),transparent)}
+.tagline span{font-family:var(--sans);font-size:16px;letter-spacing:.42em;color:var(--rose);text-transform:uppercase}
+.kicker{margin-top:56px;font-family:var(--sans);font-size:16px;letter-spacing:.34em;text-transform:uppercase;color:var(--rose)}
+.plum-hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(40px,7vw,64px);line-height:1.08;margin-top:24px;letter-spacing:.005em;color:var(--champagne)}
+.plum-hero h1 em{font-style:italic;color:#fff}
+.plum-hero .lead{margin:26px auto 0;max-width:58ch;font-size:20px;color:#e6cbb4;font-family:var(--serif)}
+.rule-hero{width:120px;height:2px;margin:32px auto 0;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+.pair-badge{display:inline-flex;align-items:center;gap:26px;margin-top:46px}
+.pair-badge .p{font-family:var(--sans);font-size:16px;letter-spacing:.22em;color:var(--champagne);text-transform:uppercase}
+.pair-badge .heart{font-family:var(--serif);font-style:italic;font-size:34px;color:var(--rose);transform:translateY(-3px)}
+.verdict-hero{margin-top:44px;font-family:var(--serif);font-size:clamp(22px,3.2vw,30px);font-weight:500;color:#fff}
+.verdict-hero strong{font-weight:600;color:var(--champagne)}
+.verdict-hero .res{font-style:italic;color:var(--rose)}
+
+/* ── secciones editoriales ── */
+main{padding:0 0 30px}
+.section{padding:74px 0;border-bottom:1px solid var(--line)}
+.sec-eyebrow{font-family:var(--sans);font-size:16px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);font-weight:600;display:flex;align-items:center;gap:16px}
+.sec-eyebrow .roman{font-family:var(--display);font-size:18px;color:var(--bronze);letter-spacing:.1em}
+.sec-eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+.section h2{font-family:var(--serif);font-weight:500;font-size:clamp(28px,4vw,40px);line-height:1.16;margin-top:22px;letter-spacing:-.005em}
+.section h3{font-family:var(--serif);font-weight:500;font-size:22px;margin-top:40px;line-height:1.3}
+.lead-p{margin-top:18px;font-size:19px;color:#4c4036;font-style:italic}
+.section p{margin-top:18px;max-width:68ch;color:#332a22}
+.section p strong{font-weight:600;color:var(--ink)}
+.section p em{color:#4c4036}
+.pull{margin:38px 0 6px;padding:6px 0 6px 26px;border-left:2px solid var(--rose);font-style:italic;font-size:clamp(20px,2.6vw,25px);line-height:1.5;color:var(--bronze);max-width:60ch}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:34px;margin-top:30px}
+.two-col h3{margin-top:0}
+.mini-tag{display:inline-block;font-family:var(--sans);font-size:16px;letter-spacing:.18em;text-transform:uppercase;color:var(--copper);border:1px solid var(--line);padding:6px 14px;margin-bottom:12px;background:#fff}
+.glosa-note{margin-top:26px;font-family:var(--sans);font-size:16px;color:var(--muted);border:1px dashed var(--line);padding:14px 18px;background:#fffdf9;max-width:68ch}
+
+/* ── síntesis ── */
+.sintesis{background:var(--noir);color:var(--champagne);padding:86px 0 74px;border-bottom:none;position:relative;overflow:hidden}
+.sintesis::after{content:"";position:absolute;width:940px;height:940px;border-radius:50%;border:1px solid rgba(242,210,190,.1);left:50%;top:-420px;transform:translateX(-50%);pointer-events:none}
+.sintesis .sec-eyebrow{color:var(--champagne)}
+.sintesis .sec-eyebrow::after{background:rgba(242,210,190,.25)}
+.sintesis .sec-eyebrow .roman{color:var(--rose)}
+.sintesis h2{color:#fff}
+.sintesis p{color:#ecd9c6;max-width:64ch;font-size:19px}
+.sintesis .big-chain{margin-top:44px;font-family:var(--display);font-size:clamp(20px,3.4vw,32px);font-weight:600;letter-spacing:.04em;color:var(--champagne);line-height:1.5}
+.sintesis .big-chain span{color:var(--rose)}
+.chain-rule{width:100%;max-width:64ch;height:1px;margin:38px auto 0;background:linear-gradient(90deg,transparent,rgba(242,210,190,.5),transparent)}
+.score-band{margin-top:48px;display:flex;max-width:64ch;margin-left:auto;margin-right:auto;border:1px solid rgba(242,210,190,.28)}
+.score-band>div{flex:1;padding:24px 12px;text-align:center;border-right:1px solid rgba(242,210,190,.2)}
+.score-band>div:last-child{border-right:none}
+.score-band .s-v{font-family:var(--display);font-size:40px;font-weight:600;color:var(--champagne);line-height:1}
+.score-band .s-l{font-family:var(--sans);font-size:16px;letter-spacing:.14em;text-transform:uppercase;color:var(--rose);margin-top:12px;line-height:1.4}
+
+/* ── anexo técnico ── */
+.annex{background:#f6efe4}
+.annex h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.4vw,34px);margin:22px 0 8px;color:var(--ink)}
+.annex .note{font-family:var(--sans);font-size:16px;color:var(--muted);margin-bottom:28px;max-width:72ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.an-card{border:1px solid var(--line);background:var(--card);padding:22px 24px}
+.an-card h4{font-family:var(--display);font-size:16px;letter-spacing:.14em;font-weight:600;color:var(--copper);margin-bottom:14px}
+.an-card table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:16px}
+.an-card td{padding:6px 4px;border-bottom:1px dashed var(--line);color:#3a2f27}
+.an-card td:last-child{text-align:right;font-family:var(--display);font-weight:600;color:var(--copper);white-space:nowrap}
+.an-card tr:last-child td{border-bottom:none}
+.an-card td.row{text-align:left;color:var(--muted)}
+.an-card td.c{text-align:center}
+.an-card.couple{max-width:calc(50% - 13px)}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}.an-card.couple{max-width:none}.two-col{grid-template-columns:1fr}}
+.mono-note{margin-top:38px;font-family:var(--sans);font-size:16px;color:var(--muted);max-width:74ch;line-height:1.7}
+
+/* ── glosario ── */
+.glosario{display:grid;grid-template-columns:1fr 1fr;gap:0 44px;margin-top:26px}
+@media (max-width:760px){.glosario{grid-template-columns:1fr}}
+.glosario dt{font-family:var(--sans);font-weight:600;font-size:16px;color:var(--copper);margin-top:16px}
+.glosario dd{font-family:var(--sans);font-size:16px;color:#4c4036;margin-top:2px;padding-right:10px}
+
+/* ── footer ── */
+.footer{border-top:none;padding:54px 0 70px;background:var(--bg);text-align:center}
+.footer .brand{color:var(--bronze);font-size:20px;text-shadow:none}
+.footer .foot-line{font-family:var(--sans);font-size:16px;color:var(--muted);letter-spacing:.04em;margin-top:14px;max-width:74ch;line-height:1.8;margin-left:auto;margin-right:auto}
+</style>
+</head>
+<body>
+
+<!-- ============ PORTADA ============ -->
+<header class="plum-hero">
+  <div class="wrap">
+    <div class="brand">T<span class="amp">&amp;</span>Y</div>
+    <div class="logo-wrap">
+      <img class="hero-logo" src="ty-logo-ciruela.png" alt="T&amp;Y · Match Beyond Love" width="842" height="836">
+      <div class="sheen"></div>
+    </div>
+    <div class="tagline"><span class="filete"></span><span>Match Beyond Love</span><span class="filete r"></span></div>
+    <div class="kicker">Informe de compatibilidad védica · Jyotish</div>
+    <h1>Javier <em>&amp;</em> Yudy</h1>
+    <p class="lead">Astrología sideral védica — ayanamsa Lahiri, casas por signo completo, efemérides NASA y verificación contra el estándar internacional. Dos valoraciones: la línea base tradicional de la Luna y el diagnóstico completo de la pareja, leído en ocho capas por separado.</p>
+    <div class="pair-badge">
+      <span class="p">Javier · Tauro</span>
+      <span class="heart">&amp;</span>
+      <span class="p">Yudy · Aries</span>
+    </div>
+    <div class="verdict-hero">Veredicto: <strong>sí</strong> — <span class="res">con reserva seria.</span></div>
+    <div class="rule-hero"></div>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <p class="glosa-note" style="margin-top:38px">Al final de este estudio encontrarás el significado de todos los términos astrológicos.</p>
+</div>
+
+<!-- ============ I · PRINCIPIO CERO ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">I</span> Lo primero que hay que saber</div>
+    <h2>Quedarse y desear son dos circuitos distintos</h2>
+    <p class="lead-p">Este estudio separa desde el principio dos cosas que el lenguaje cotidiano confunde.</p>
+    <p>La <strong>lealtad</strong> —no me voy, trabajo la relación, no abandono— depende de Saturno. La <strong>fidelidad</strong> —el deseo y el corazón enfocados en una sola persona— depende de Venus, la Luna y Marte. Son circuitos independientes: una persona puede quedarse en la relación durante décadas <em>y aun así tener aventuras por fuera</em>. «Jamás te dejo» no contradice «me distraigo con otros». Este informe no suaviza esa distinción: la aplica en cada apartado, porque es lo que más pesa en la decisión de una pareja.</p>
+    <p>Lo segundo: la tradición védica clásica (el sistema de los 36 puntos) valora únicamente la Luna de cada uno — la mente, el temperamento emocional. Es un filtro optimista. El diagnóstico completo valora la carta entera: Venus, Marte, Saturno, las casas de la pareja, los períodos de vida. Aquí van los dos, y el veredicto final integra ambos.</p>
+  </div>
+</section>
+
+<!-- ============ II · EL VEREDICTO DE LA TRADICIÓN ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">II</span> Línea base tradicional</div>
+    <h2>Lo que dice la Luna: buena, con una firma exacta</h2>
+    <p class="lead-p">28 de 36 puntos — compatibilidad «buena» según la escala clásica.</p>
+    <p>Pero la suma, sola, engaña. Lo que el diagnóstico exige leer es <strong>qué kootas caen en cero</strong>, y aquí caen tres, y los tres apuntan al mismo sitio.</p>
+    <p><strong>Estatus</strong> (varna): la posición regia de la Luna de ella por encima de la de él. <strong>Poder</strong> (vashya): sus lunares se sitúan como signos que la tradición declara incompatibles — el guerrero y el habitante, cada uno tratando de conducir al otro a su modo. Y sobre todo <strong>instinto</strong> (yoni): los animales lunares de esta pareja son gato y rata — archienemigos naturales. El cero de yoni es la firma técnica del punto débil estructural de este vínculo: <strong>la pasión física no está diseñada para encajar</strong>. No es un bache pasajero: es arquitectura.</p>
+    <p>El resto de la línea base acompaña: misma mentalidad espiritual (deva y humano — de los vínculos que la tradición considera estables), regentes lunares en relación amistosa, sin dosha de distancia entre las lunas, y nadis distintas — el punto más valioso del sistema completo, porque cuando ambas lunas caen en la misma nadi la tradición desaconseja el matrimonio. Aquí lo superan con el máximo.</p>
+    <p class="pull">La Luna dice: pueden convivir, entenderse y durar. El cuerpo dice: el instinto no viene de fábrica enlazado.</p>
+  </div>
+</section>
+
+<!-- ============ III · EL VÍNCULO ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">III</span> Diagnóstico · Bloque 1</div>
+    <h2>El vínculo: fidelidad, entrega, madurez</h2>
+    <div class="two-col">
+      <div>
+        <span class="mini-tag">Fidelidad · Yudy 8/10</span>
+        <p>Su Venus en Cáncer —devoto, maternal, de agua— no muestra ninguno de los marcadores duros de infidelidad: ni el Venus que la tradición sitúa en la casa de lo ilícito, ni Venus en signo doble, ni la Luna en la mansión de la intensidad sexual exhibicionista, ni el contacto Venus–Rahu. El circuito del corazón está bien construido. La reserva es real y hay que nombrarla: su Ketu en la casa de la pareja marca <em>desapego</em> cuando el compromiso se profundiza — no deseo de otro, sino momentos de «¿y esto es todo?» que hay que saber atravesar hablando.</p>
+      </div>
+      <div>
+        <span class="mini-tag">Fidelidad · Javier 7/10</span>
+        <p>Su Venus caído en Virgo, en conjunción con Saturno, es el retrato del deseo <em>contenidor</em>: disciplina sobre la emoción. Sin marcadores duros de infidelidad tampoco. La reserva es su Rahu en Cáncer — agua, inquietud, ilusión romántica que burbujea por dentro: no la energía del aventurero, sino la del que idealiza en silencio. Y su período actual de vida amplifica ese canal (lo vemos en el apartado del tiempo).</p>
+      </div>
+    </div>
+    <div class="two-col">
+      <div>
+        <span class="mini-tag">Entrega · Yudy 9/10</span>
+        <p>Es su nota más alta y está sostenida por lo más sólido de su carta: Saturno <strong>exaltado en su casa de la pareja</strong>, y encima como planeta del alma. Lealtad de manual: la persona que trabilla el vínculo, que aguanta, que no se va. Si el matrimonio fuera solo cuestión de Saturno, esta mujer no se divorcearía ni en cuatro vidas.</p>
+      </div>
+      <div>
+        <span class="mini-tag">Entrega · Javier 7/10</span>
+        <p>Su Saturno en la casa del romance, en triple conjunción con Venus y Júpiter: compromiso real con la relación — pero filtrado por Virgo, es decir, por la crítica y el perfeccionamiento constante. Entrega sí; entrega sin condiciones de calidad, no.</p>
+      </div>
+    </div>
+    <h3>Madurez emocional — 6 y 5</h3>
+    <p>Ella tiene fuego emocional: Luna y Marte juntos en Leo, orgullo que arde y reacciona — pero sin caídas, con estructura. Él tiene el patrón más delicado de las dos cartas: <strong>Marte caído en Cáncer</strong>, el enfado que no se dice y se traga, que reaparece como retirada silenciosa o como sarcasmo indirecto. Concretamente: ella explota en el momento y a la cara; él acumula tres fricciones sin decir nada y a la cuarta suena frío «sin motivo». Los dos patrones necesitan gestión, pero el de él es el que más erosiona una relación de pareja, porque el conflicto no entra al circuito de reparación.</p>
+  </div>
+</section>
+
+<!-- ============ IV · LAS SOMBRAS ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">IV</span> Diagnóstico · Bloque 2</div>
+    <h2>Las sombras: lo que puede desgastarlos</h2>
+    <p class="lead-p">Tres riesgos, puntuados en escala de advertencia (más alto = más riesgo).</p>
+    <h3>Control y celos — Javier 5/10 de riesgo, Yudy 3/10</h3>
+    <p>El riesgo de control no está en él como celoso posesivo clásico: está en <strong>la crítica como forma de manejar el afecto</strong>. Venus y Saturno juntos en Virgo producen el «te corrijo porque me importas»: comentarios sobre cómo cocina, cómo conduce, cómo se viste, cómo cría. Ninguno de esos gestos es cruel por separado; su acumulación es un goteo que apaga el entusiasmo de una pareja con la Luna en Leo. Ella, en cambio, tiene riesgo bajo de control: Aries ascendente, directo, sin geometría de posesión — su riesgo es otro.</p>
+    <h3>Necesidad de admiración — Yudy 8/10 de riesgo</h3>
+    <p>Con el Sol en Leo —su propio reino— y un estelio de cuatro planetas en su casa del romance, esta mujer <strong>necesita ser admirada para sentirse viva</strong>. No es vanidad: es la gasolina de su diseño. Consecuencia concreta: si en la relación deja de recibir admiración explícita —elogios, deseo visible, orgullo público de ella—, no se apaga: se apaga <em>hacia dentro de la casa</em> y empieza a buscar esa corriente afuera. Combinado con el goteo crítico de él, es exactamente el escenario donde su fidelidad (que es buena) queda a prueba.</p>
+    <p class="pull">El cruce real de desgaste de esta pareja: ella pide admiración — él responde con corrección. Ella se siente juzgada — él se siente no correspondido.</p>
+    <h3>Tener la razón — Javier 6/10 de riesgo, Yudy 4/10</h3>
+    <p>Él tiene a Mercurio como planeta del alma, situado en Leo: su identidad está construida sobre sus ideas y su palabra. Ceder un argumento le cuesta como ceder territorio. En la vida práctica: discusiones que ya no tratan del tema, sino de quién tiene razón; y una tendencia a cerrarlas con un argumento final bien construido en vez de un abrazo. Ella discute por fuego y suelta antes; él se queda con la última palabra escrita.</p>
+  </div>
+</section>
+
+<!-- ============ V · LA PASIÓN ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">V</span> La pregunta que toda pareja debe hacerse</div>
+    <h2>La pasión: ¿transitoria o estructural?</h2>
+    <p class="lead-p">Estructural. Cuatro capas independientes convergen, y todas dicen lo mismo.</p>
+    <p>Primera: el instinto lunar (yoni) gato–rata, el archienemigo físico del sistema. Segunda: el Venus de él caído en Virgo — el deseo filtrado por la crítica, cuya frase firma es <em>«me gusta… pero podría gustarme más»</em>. Tercera: su Marte caído en Cáncer — el impulso amortiguado, emocional, que prefiere el refugio al arrebato. Cuarta: el eje Venus–Marte del vínculo cae íntegro en agua (Cáncer), con sus Venus en relación de fricción silenciosa (Virgo–Leo).</p>
+    <p>La traducción honesta: <strong>esta pareja no vivirá una pasión de fuego; vivirá una pasión de agua</strong> — ternura, refugio, contacto que consolida en vez de incendiar. El deseo existe (el Venus de ella en Cáncer y el Marte de él en el mismo signo es una conjunción real de atracción acuática), pero se expresa en cuidado, no en llama. Si alguno de los dos necesita, para ser feliz, la combustión espontánea de los primeros meses convertida en norma permanente, ese alguien saldrá defraudado. Si pueden redefinir la pasión como intimidad emocional que incluye el cuerpo, el mapa es favorable.</p>
+    <p class="pull">No habrá que rescatar la pasión del olvido: habrá que aceptar que su idioma es el agua y no el fuego.</p>
+  </div>
+</section>
+
+<!-- ============ VI · LA REPARACIÓN ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VI</span> Diagnóstico · Bloque 3</div>
+    <h2>La capacidad de reparar: verdad, errores, cambio</h2>
+    <h3>Decir la verdad — Javier 8/10, Yudy 7/10</h3>
+    <p>Él tiene la palabra como propósito del alma: Mercurio reinante, unido al Sol — inteligencia que dice lo que piensa sin filtro malintencionado. Ella, con el mismo Sol–Mercurio en Leo, también juega limpio en lo esencial; su freno no es la mentira sino el orgullo de admitir lo que la humilla.</p>
+    <h3>Reconocer errores — Yudy 5/10, Javier 4/10</h3>
+    <p>El punto blando de ambos y el más bajo de él. En Yudy: orgullo de fuego (Sol y Marte en Leo) que le cuesta el «me equivoqué» — pero su Saturno exaltado en Libra, planeta de la justicia, la devuelve a la equidad cuando el fuego baja. En Javier el orgullo se suma a la retirada pasiva del Marte caído: su forma de reconocer un error es desaparecer un rato y volver como si nada, sin la frase explícita. La pareja necesitará un ritual concreto — disculpa dicha en voz alta, no presupuesta — o este circuito queda cojo.</p>
+    <h3>Cambio interno — ambos 6/10</h3>
+    <p>Los dos tienen a Saturno fuerte: ella exaltado en su casa angular, él disciplinando su casa del corazón. Son personas que <em>sí cambian</em> cuando ven el patrón con claridad — no por gusto, sino porque su arquitectura respeta el trabajo. Esta es la buena noticia del diagnóstico: los defectos listados arriba no son muros; son músculos sin entrenar.</p>
+  </div>
+</section>
+
+<!-- ============ VII · EL TIEMPO ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VII</span> El factor tiempo</div>
+    <h2>La ventana que están viviendo</h2>
+    <p class="lead-p">Los rasgos no son etiquetas fijas: son fases que se encienden y apagan según el período.</p>
+    <p>Ahora mismo, <strong>ambos están atravesando simultáneamente su período de Júpiter</strong> — el de él hasta noviembre de 2027, el de ella hasta octubre de 2027. En la carta femenina, Júpiter es el significador del esposo. Una coincidencia así no la produce el azar en cualquier par de personas: es la ventana natural de <strong>formalización</strong> — decidir, presentar, casarse, anclar. Importa entender qué ventana es y qué no es: es la ventana del compromiso, no de la pasión — la pasión de esta pareja ya sabemos que no depende del timing.</p>
+    <p>Después de esa ventana vienen pruebas específicas que conviene tener escritas. Ella entra en 2028 a su período de Saturno — que en su carta es el alma exaltada en la casa de la pareja: la etapa en que la lealtad se consolida <em>o</em> se aburre; el momento exacto en que su necesidad de admiración pide respuesta o empieza a mirar afuera. Y su gran período de Rahu —el canal de la inquietud y la ilusión romántica— sigue encendido hasta 2040: es el contexto donde «me distraigo con otros» deja de ser teoría y se vuelve riesgo de calendario. Él, desde finales de 2027, entra a su período de Saturno: más serio, más crítico, más exigente con la calidad — es decir, exactamente el músculo que la relación necesitará estirar para no desgastarla.</p>
+    <p class="pull">El 2026–2027 es para formalizar. El 2028–2030 es para mantener viva a la mujer que se aburre siendo leal.</p>
+  </div>
+</section>
+
+<!-- ============ SÍNTESIS ============ -->
+<section class="sintesis">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VIII</span> Síntesis integradora</div>
+    <h2>El hilo que los une</h2>
+    <p>Javier y Yudy forman una pareja de <strong>hogar</strong>, no de artificio. La señal más fuerte de toda la sinastría: cuatro planetas de ella —Sol, Luna, Marte y Mercurio— caen directamente en la casa del hogar de él. Literalmente védico: <em>ella le hace casa</em>. Y el Sol y la palabra de él caen en la casa del romance de ella: él le enciende el juego, la creatividad, el niño interior. Sus lunares están en relación de amistad (tres-once): la base mental de los que se cuentan el día. Ambos tienen a Marte como significador del cónyuge — se reconocen, sin saber por qué, como «mi tipo de persona». Y ninguno de los dos arrastra el estigma marciano clásico del matrimonio: la tradición no objeta esta unión.</p>
+    <p>El precio de ese hogar es doble y ya está nombrado: la pasión será agua —tierna, hogareña, no incendiaria— y el cruce admiración/crítica es el punto donde la pareja puede desangrarse en silencio. Ninguno de los dos defectos es letra pequeña: ambos son estructurales. Pero el diagnóstico también muestra dos personas capaces de cambiar cuando ven el patrón. Con admiración explícita de él (y eso es entrenable: un elogio diario dicho en voz alta) y con una forma pactada de reparar disculpas, este vínculo tiene lo que la mayoría no tiene: cimiento que se construye solo, y un mapa claro de dónde va a gotear.</p>
+    <div class="big-chain">Hogar <span>·</span> Amistad <span>·</span> Compromiso <span>·</span> Ternura <span>·</span> Permanecer</div>
+    <div class="chain-rule"></div>
+    <div class="score-band">
+      <div><div class="s-v">28</div><div class="s-l">Línea base<br>de 36</div></div>
+      <div><div class="s-v">8</div><div class="s-l">Entrega<br>Yudy /10</div></div>
+      <div><div class="s-v">7.5</div><div class="s-l">Fidelidad<br>media</div></div>
+      <div><div class="s-v">5.5</div><div class="s-l">Madurez<br>emocional</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ANEXO ============ -->
+<section class="section annex">
+  <div class="wrap">
+    <div class="sec-eyebrow">Anexo · Detalle técnico</div>
+    <h2>La arquitectura del cielo</h2>
+    <p class="note">Motor de cálculo propio (efemérides NASA JPL, ayanamsa Lahiri, casas por signo completo, Luna geocéntrica; verificado contra Swiss Ephemeris el 27/09/2026, desviación &lt; 0,5′ de arco). Ashtakoota calculado por tablas deterministas según convenciones ORIGEN. Escala de los nueve aspectos: 1–10 por persona, separados.</p>
+
+    <div class="grid2">
+      <div class="an-card">
+        <h4>Javier · 26-08-1981 · 00:05 · Mataró</h4>
+        <table>
+          <tr><td class="row">Ascendente (lagna)</td><td>Tauro 5°09′</td></tr>
+          <tr><td class="row">Luna · nakshatra</td><td>Géminis 22°56′ · Punarvasu 1</td></tr>
+          <tr><td class="row">Sol + Mercurio</td><td>Leo · casa 4</td></tr>
+          <tr><td class="row">Júpiter + Venus + Saturno</td><td>Virgo · casa 5</td></tr>
+          <tr><td class="row">Marte (caído, con cancelación)</td><td>Cáncer · casa 3</td></tr>
+          <tr><td class="row">Rahu / Ketu</td><td>Cáncer / Capricornio</td></tr>
+          <tr><td class="row">Atmakaraka (alma)</td><td>Mercurio</td></tr>
+          <tr><td class="row">Darakaraka (cónyuge)</td><td>Marte</td></tr>
+          <tr><td class="row">Período actual</td><td>Mercurio MD · Júpiter AD → 18/11/2027</td></tr>
+          <tr><td class="row">D9: Venus / Marte / Luna</td><td>Acuario · Aries · Aries</td></tr>
+        </table>
+      </div>
+      <div class="an-card">
+        <h4>Yudy · 13-09-1985 · 20:20 · Bogotá</h4>
+        <table>
+          <tr><td class="row">Ascendente (lagna)</td><td>Aries 8°45′</td></tr>
+          <tr><td class="row">Luna · nakshatra</td><td>Leo 17°35′ · Purva Phalguni 2</td></tr>
+          <tr><td class="row">Estelio (Sol·Luna·Marte·Mercurio)</td><td>Leo · casa 5</td></tr>
+          <tr><td class="row">Venus</td><td>Cáncer · casa 4 (Ashlesha)</td></tr>
+          <tr><td class="row">Saturno (exaltado) · Júpiter (exaltado)</td><td>Libra 7 · Capricornio 10</td></tr>
+          <tr><td class="row">Rahu / Ketu</td><td>Aries / Libra</td></tr>
+          <tr><td class="row">Atmakaraka (alma)</td><td>Saturno</td></tr>
+          <tr><td class="row">Darakaraka (cónyuge)</td><td>Marte</td></tr>
+          <tr><td class="row">Período actual</td><td>Rahu MD · Júpiter AD → 08/10/2027</td></tr>
+          <tr><td class="row">D9: Venus / Marte / Luna</td><td>Escorpio · Piscis · Géminis</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="an-card">
+        <h4>Ashtakoota · 28/36 (buena)</h4>
+        <table>
+          <tr><td class="row">Varna (estatus) — Leo Kshatriya vs Géminis Shudra</td><td>0</td></tr>
+          <tr><td class="row">Vashya (poder) — Vanachara vs Manava, enemigos</td><td>0</td></tr>
+          <tr><td class="row">Tara (destino) — d=4 → Kshema</td><td>3</td></tr>
+          <tr><td class="row">Yoni (instinto) — gato vs rata, archienemigos</td><td>0</td></tr>
+          <tr><td class="row">Graha Maitri — regentes Sol/Mercurio, amigo+neutral</td><td>4</td></tr>
+          <tr><td class="row">Gana — Manushya + Deva (convención: 6)</td><td>6</td></tr>
+          <tr><td class="row">Bhakoot — relación 3/11, sin dosha</td><td>7</td></tr>
+          <tr><td class="row">Nadi — Madhya vs Adi, distintas</td><td>8</td></tr>
+          <tr><td class="row"><strong>Total</strong></td><td><strong>28</strong></td></tr>
+        </table>
+      </div>
+      <div class="an-card">
+        <h4>Mangal dosha</h4>
+        <table>
+          <tr><td class="row">Marte desde el ascendente — Javier (casa 3) / Yudy (casa 5)</td><td>Sin dosha</td></tr>
+          <tr><td class="row">Marte desde la Luna — Javier 2ª / Yudy 1ª</td><td>Dosha suave ambos</td></tr>
+          <tr><td class="row">Marte desde Venus — Javier 11ª / Yudy 2ª</td><td>Dosha suave Yudy</td></tr>
+          <tr><td class="row">Lectura</td><td>Ninguno Manglik clásico</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="an-card couple" style="max-width:100%">
+      <h4>Los nueve aspectos (notas calibradas 1–10)</h4>
+      <table>
+        <tr><td class="row">Fidelidad (Venus·Luna·Marte)</td><td class="c">Yudy 8</td><td class="c">Javier 7</td></tr>
+        <tr><td class="row">Claridad / decir la verdad (Mercurio)</td><td class="c">7</td><td class="c">8</td></tr>
+        <tr><td class="row">Entrega en la relación (Saturno)</td><td class="c">9</td><td class="c">7</td></tr>
+        <tr><td class="row">Madurez emocional (Luna·Marte)</td><td class="c">6</td><td class="c">5</td></tr>
+        <tr><td class="row">Control / celos (riesgo) (Saturno·Escorpio)</td><td class="c">3</td><td class="c">5</td></tr>
+        <tr><td class="row">Validación externa (riesgo) (Sol)</td><td class="c">8</td><td class="c">5</td></tr>
+        <tr><td class="row">Tener la razón (riesgo) (Mercurio·Marte)</td><td class="c">4</td><td class="c">6</td></tr>
+        <tr><td class="row">Reconocer errores (Saturno·Sol·Marte)</td><td class="c">5</td><td class="c">4</td></tr>
+        <tr><td class="row">Cambio interno (Saturno·Capricornio·Júpiter)</td><td class="c">6</td><td class="c">6</td></tr>
+      </table>
+    </div>
+
+    <div class="grid2">
+      <div class="an-card">
+        <h4>Sinastría · cruces que pesan</h4>
+        <table>
+          <tr><td class="row">Sol+Luna+Marte+Mercurio de Yudy → casa 4 de Javier</td><td>Hogar</td></tr>
+          <tr><td class="row">Sol+Mercurio de Javier → casa 5 de Yudy</td><td>Romance</td></tr>
+          <tr><td class="row">Venus de Javier (Virgo) → casa 6 de Yudy</td><td>Servicio</td></tr>
+          <tr><td class="row">Venus de Yudy = Marte de Javier (Cáncer)</td><td>Atracción</td></tr>
+          <tr><td class="row">Rahu de Javier → casa 4 de Yudy</td><td>Obsesión</td></tr>
+          <tr><td class="row">Ambos con Marte como darakaraka</td><td>Reconocimiento</td></tr>
+        </table>
+      </div>
+      <div class="an-card">
+        <h4>Método</h4>
+        <table>
+          <tr><td class="row">Cada aspecto: barrido de 8 capas</td><td>Signo·casa·nakshatra·aspectos·D9·dasha·ashtakavarga·karakas</td></tr>
+          <tr><td class="row">Tono según convergencia</td><td>1 capa «podría» · 2-3 «probable» · 4+ «es así»</td></tr>
+          <tr><td class="row">Pasión estructural: capas que convergen</td><td>Yoni 0 · Venus caído · Marte caído · eje agua 2/12</td></tr>
+          <tr><td class="row">Veredicto sobre pilares de peso alto</td><td>Hogar · amistad · compromiso · sin Manglik</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOSARIO ============ -->
+<section class="section" style="border-bottom:none;padding-bottom:20px">
+  <div class="wrap">
+    <div class="sec-eyebrow">Glosario</div>
+    <h2 style="font-size:clamp(24px,3vw,30px)">Los términos de este estudio, en palabras sencillas</h2>
+    <dl class="glosario">
+      <dt>Lagna (ascendente)</dt><dd>El signo que salía por el horizonte este en el instante del nacimiento; la puerta de entrada de la carta, marca el cuerpo y el carácter visible.</dd>
+      <dt>Nakshatra</dt><dd>Una de las 27 «mansiones lunares» — la Luna recorre una cada día. Funciona como el ADN emocional: temperamento profundo más fino que el signo.</dd>
+      <dt>Pada</dt><dd>Cada nakshatra se divide en 4 padas (pasos); indica la posición exacta dentro de la mansión lunar.</dd>
+      <dt>Rasi</dt><dd>El signo sideral védico (zodiaco fijo, medido sobre las estrellas, no sobre el equinoccio).</dd>
+      <dt>Casas por signo completo (whole sign)</dt><dd>Sistema védico clásico: todo el signo del ascendente es la casa 1, el siguiente la 2, y así sucesivamente.</dd>
+      <dt>Atmakaraka</dt><dd>El planeta de mayor grado de la carta: el «rey del alma», el propósito central de esta vida según el sistema Jaimini.</dd>
+      <dt>Darakaraka</dt><dd>El planeta de menor grado: el significador del cónyuge — describe el tipo de pareja que el karma atrae.</dd>
+      <dt>Navamsa (D9)</dt><dd>La carta del matrimonio y del dharma: cada signo se divide en 9; muestra cómo maduran las promesas de la carta natal.</dd>
+      <dt>Mahadasha / Antardasha</dt><dd>Los grandes períodos de la vida védicos y sus subperíodos (ciclo de 120 años desde la Luna natal): indican cuándo se enciende cada tema.</dd>
+      <dt>Ashtakoota (36 gunas)</dt><dd>Sistema clásico de emparejamiento por la Luna de cada persona: 8 pruebas (kootas) que suman 36 puntos. 18-24 regular · 25-32 buena · 33+ excelente.</dd>
+      <dt>Varna</dt><dd>Koota de estatus (1 pt): la jerarquía tradicional de castas entre las lunas.</dd>
+      <dt>Vashya</dt><dd>Koota de poder (2 pts): quién puede «domesticar» a quién — la ecuación de influencia entre ambos signos lunares.</dd>
+      <dt>Tara</dt><dd>Koota de destino (3 pts): la distancia en mansiones entre las dos lunas — favorable, neutra o de fricción.</dd>
+      <dt>Yoni</dt><dd>Koota del instinto (4 pts): cada nakshatra encarna un animal; la compatibilidad sexual-energética se lee en esa pareja de animales.</dd>
+      <dt>Gana</dt><dd>Koota del temperamento (6 pts): deva (divino), manushya (humano), rakshasa (pasional) — la armonía de naturaleza entre ambos.</dd>
+      <dt>Nadi</dt><dd>Koota constitucional (8 pts): el canal energético (adi/madhya/antya); que ambos compartan nadi es el impedimento clásico más grave del sistema.</dd>
+      <dt>Bhakoot</dt><dd>Koota de distancia entre signos lunares (7 pts): 6/8, 2/12 y 5/9 son los cuatro ángulos de fricción clásicos.</dd>
+      <dt>Mangal dosha (Manglik)</dt><dd>Estigma marciano: Marte en casas 1, 2, 4, 7, 8 o 12 desde el ascendente — la tradición lo consulta antes del matrimonio; se anula si ambos lo tienen.</dd>
+      <dt>Neecha Bhanga</dt><dd>«Cancelación de la caída»: un planeta debilitado que recibe ayuda específica de su regente o de un exaltado — la debilidad se convierte en fuerza.</dd>
+      <dt>Ashtakavarga</dt><dd>Sistema de puntos por casa: cuánto respaldo kármico recibe cada área de la vida.</dd>
+      <dt>Sinastría</dt><dd>La superposición de dos cartas: qué casas de uno activan los planetas del otro.</dd>
+      <dt>Rahu / Ketu</dt><dd>Los nodos lunares: el punto del deseo insaciable y la ilusión (Rahu) y el del desapego y la disolución (Ketu).</dd>
+      <dt>Ayanamsa Lahiri</dt><dd>La diferencia entre el zodiaco tropical y el sideral usada por el calendario oficial de la India.</dd>
+      <dt>Dasha</dt><dd>Período planetario regente de un tramo de la vida — la técnica de timing central del Jyotish.</dd>
+    </dl>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="brand">T<span class="amp">&amp;</span>Y</div>
+    <p class="foot-line">Estudio de compatibilidad védica elaborado con motor de cálculo propio sobre efemérides NASA JPL y verificación contra Swiss Ephemeris. Método ORIGEN de diagnóstico de pareja: línea base Ashtakoota + nueve aspectos en ocho capas. La astrología no dicta el destino: muestra tendencias que dos personas pueden trabajar. Match Beyond Love.</p>
+  </div>
+</footer>
+
+</body>
+</html>
