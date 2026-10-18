@@ -8,3 +8,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
 
 .header nav a{white-space:nowrap}@media(max-width:380px){.header .brand img{width:96px}.header{gap:12px}.header .login{padding-inline:10px}}
+
+.story-photo .photo-crop{position:relative}.story-photo .photo-crop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
