@@ -11,3 +11,6 @@
 .photo-secondary{padding-bottom:80px}
 @media(min-width:641px){.photo-secondary .wrap{grid-template-columns:1fr 1.55fr}.photo-secondary .photo{order:2}.photo-secondary .photo-copy{order:1}}
 @media(max-width:640px){.photo-secondary{padding-bottom:56px}.hero-art img{margin:0 auto 20px}}
+
+/* Revisión editorial mujeres 18/10/2026 */
+.women #como .steps{grid-template-columns:repeat(3,minmax(0,1fr))}.women #como .section-heading h2{max-width:32ch}.women #como + .photo-section{padding-bottom:32px}.truth-list{max-width:920px}.truth{display:grid;grid-template-columns:48px minmax(0,1fr);gap:24px;padding:32px 0;border-top:1px solid var(--line)}.truth h3{margin-bottom:18px}.truth p{color:var(--muted)}.truth strong{color:var(--ink);font-weight:600}.truth .step-num{margin:0}.women .levels .amount{margin-bottom:0}@media(max-width:640px){.women #como .steps{grid-template-columns:1fr}.truth{grid-template-columns:1fr;gap:16px}}
