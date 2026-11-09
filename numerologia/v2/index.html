@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>T&Y — Compatibilidad numerológica · Elisabeth &amp; Luis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#2C0A3E; --plum-light:#4A0E5C; --noir:#0B0A0C;
+  --champagne:#F2D2BE; --rose:#C99480; --bronze:#8A5A41; --copper:#5E3322;
+  --ink:#221b16; --muted:#6f6257; --card:#fffdf9; --bg:#faf6f0;
+  --line:#e2d8c9;
+  --display:"Cinzel",serif; --serif:"Inter",system-ui,sans-serif; --sans:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:960px;margin:0 auto;padding:0 32px}
+::selection{background:var(--rose);color:#fff}
+
+/* ---------- fondo de ánimo: ciruela (numerología) ---------- */
+.plum-hero{
+  position:relative;color:var(--champagne);overflow:hidden;
+  background:radial-gradient(ellipse 120% 90% at 50% 12%, var(--plum) 0%, #1c0624 52%, var(--noir) 100%);
+  padding:96px 0 110px;text-align:center;
+}
+.plum-hero::before,.plum-hero::after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(242,210,190,.18);pointer-events:none}
+.plum-hero::before{width:640px;height:640px;left:50%;top:-160px;transform:translateX(-50%)}
+.plum-hero::after{width:940px;height:940px;left:50%;top:-90px;transform:translateX(-50%)}
+
+/* ---------- logo animado ---------- */
+.logo-wrap{position:relative;width:min(210px,60vw);margin:0 auto;display:block}
+.logo-wrap + .kicker{margin-top:36px}
+.logo-wrap .hero-logo{width:100%;filter:drop-shadow(0 10px 26px rgba(0,0,0,.5));animation:logoFloat 6.5s ease-in-out infinite}
+.logo-wrap .sheen{position:absolute;inset:0;pointer-events:none;
+  -webkit-mask-image:url("ty-logo-ciruela.png");mask-image:url("ty-logo-ciruela.png");
+  -webkit-mask-size:100% auto;mask-size:100% auto;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-position:center;mask-position:center;
+  background:linear-gradient(115deg,transparent 32%,rgba(255,255,255,0) 40%,rgba(255,244,230,.85) 49%,rgba(255,255,255,0) 58%,transparent 68%);
+  background-size:250% 100%;background-repeat:no-repeat;background-position:-160% 0;
+  mix-blend-mode:screen;animation:logoSheen 7s ease-in-out 1.2s infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes logoSheen{0%{background-position:-170% 0}55%{background-position:170% 0}100%{background-position:170% 0}}
+@media (prefers-reduced-motion:reduce){
+  .logo-wrap .hero-logo,.logo-wrap .sheen{animation:none}
+  .logo-wrap .hero-logo{filter:drop-shadow(0 10px 26px rgba(0,0,0,.5))}
+  .logo-wrap .sheen{background:none}
+}
+
+.kicker{margin-top:64px;font-family:var(--sans);font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--rose)}
+.plum-hero h1{font-family:var(--display);font-weight:400;font-size:clamp(34px,6vw,60px);line-height:1.1;margin-top:26px;letter-spacing:.02em;color:var(--champagne)}
+.plum-hero h1 em{font-style:normal;color:#fff}
+.plum-hero .lead{margin:28px auto 0;max-width:56ch;font-size:19px;color:#e6cbb4;font-family:var(--serif)}
+.rule-hero{width:120px;height:2px;margin:34px auto 0;background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+
+.pair-badge{display:inline-flex;align-items:center;gap:26px;margin-top:52px}
+.pair-badge .p{font-family:var(--display);font-size:15px;letter-spacing:.2em;color:var(--champagne)}
+.pair-badge .n{display:block;font-family:var(--display);font-size:46px;font-weight:600;color:var(--rose);line-height:1}
+.pair-badge .sub{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.3em;color:#c9a;text-transform:uppercase;margin-top:6px}
+.pair-badge .heart{font-family:var(--display);font-size:40px;color:var(--rose);transform:translateY(-4px)}
+
+/* ---------- secciones editoriales ---------- */
+main{padding:0 0 30px}
+.section{padding:76px 0;border-bottom:1px solid var(--line)}
+.sec-eyebrow{font-family:var(--sans);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);font-weight:600;display:flex;align-items:center;gap:16px}
+.sec-eyebrow .roman{font-family:var(--display);font-size:18px;color:var(--bronze);letter-spacing:.1em}
+.sec-eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
+.section h2{font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,38px);line-height:1.18;margin:22px 0 20px;letter-spacing:.01em;color:var(--ink)}
+.section h2 em{font-style:normal;color:var(--copper)}
+.section p{max-width:70ch;margin:0 auto 0;color:#3a2f27}
+.section p+p{margin-top:18px}
+.section p.lead-p{font-size:20px;color:var(--ink);font-weight:400}
+.section .num{font-family:var(--display);color:var(--copper);font-weight:600}
+.lead-num{font-family:var(--display);font-size:22px;color:var(--copper);font-weight:600;letter-spacing:.02em}
+
+.dialogue{margin:34px auto 0;max-width:70ch;border-left:3px solid var(--rose);padding:6px 0 6px 24px}
+.dialogue+.dialogue{margin-top:26px}
+.dialogue h3{font-family:var(--display);font-size:17px;letter-spacing:.14em;font-weight:600;color:var(--copper);margin-bottom:10px}
+.dialogue p{font-size:17px;color:#3a2f27}
+
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,28px);line-height:1.45;color:var(--copper);max-width:26ch;margin:44px 0 0 auto;text-align:right;font-weight:400}
+.pull small{display:block;font-style:normal;font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.05em}
+
+/* ---------- tabla de áreas ---------- */
+.areas{margin-top:38px;border-top:1px solid var(--line)}
+.area-row{display:grid;grid-template-columns:210px 74px 1fr;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.area-row .a-name{font-family:var(--sans);font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);font-weight:600}
+.area-row .a-note{font-family:var(--display);font-size:26px;font-weight:600;color:var(--ink);text-align:right;line-height:1}
+.area-row .a-note small{font-size:12px;color:var(--muted);font-weight:400}
+.area-row .a-note.null{font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-family:var(--sans)}
+.area-row .a-text{font-size:16px;color:#3a2f27;line-height:1.6}
+
+/* ---------- índice ---------- */
+.index-block{margin-top:48px;background:linear-gradient(160deg,var(--plum) 0%,#3a1247 60%,var(--plum) 100%);
+  color:var(--champagne);padding:44px 36px;display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.index-block .idx{text-align:center}
+.index-block .idx .v{font-family:var(--display);font-size:clamp(44px,7vw,66px);font-weight:600;color:#fff;line-height:1}
+.index-block .idx .l{font-family:var(--sans);font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--rose);margin-top:14px;line-height:1.7}
+.math{margin-top:26px;font-family:var(--sans);font-size:14px;color:#e6cbb4;line-height:1.9}
+.math b{color:#fff;font-weight:600}
+
+/* ---------- cierre ---------- */
+.sintesis{background:linear-gradient(160deg,var(--plum) 0%,#3a1247 60%,var(--plum) 100%);color:var(--champagne);border:none;padding:90px 0}
+.sintesis .sec-eyebrow{color:var(--champagne)}
+.sintesis .sec-eyebrow::after{background:rgba(242,210,190,.25)}
+.sintesis h2{color:#fff}
+.sintesis p{color:#ecd9c6;max-width:64ch;font-size:19px}
+
+/* ---------- anexo ---------- */
+.annex{background:var(--bg-soft,#f6efe4)}
+.annex h2{font-family:var(--display);font-weight:500;font-size:26px;margin:6px 0 8px;color:var(--ink)}
+.annex .note{font-family:var(--sans);font-size:14px;color:var(--muted);margin-bottom:30px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:26px}
+.an-card{border:1px solid var(--line);background:var(--card);padding:22px 24px}
+.an-card h4{font-family:var(--display);font-size:14px;letter-spacing:.18em;font-weight:600;color:var(--copper);margin-bottom:14px}
+.an-card table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:14.5px}
+.an-card td{padding:5px 4px;border-bottom:1px dashed var(--line);color:#3a2f27}
+.an-card td:last-child{text-align:right;font-family:var(--display);font-weight:600;color:var(--copper);white-space:nowrap}
+.an-card tr:last-child td{border-bottom:none}
+.an-card td.row{text-align:left;color:var(--muted)}
+.couple{margin-top:26px}
+
+.mono-note{margin-top:40px;font-family:var(--sans);font-size:13px;color:var(--muted);max-width:74ch;line-height:1.7}
+.gloss{margin-top:26px;font-family:var(--sans);font-size:13.5px;color:#5c5046;line-height:1.8;max-width:74ch}
+.gloss b{color:var(--copper)}
+.footer{border-top:none;padding:50px 0 70px;background:var(--bg)}
+.footer .brand{font-family:var(--display);color:var(--bronze);font-size:20px;letter-spacing:.3em}
+.footer .brand .amp{color:var(--rose)}
+.footer .foot-line{font-family:var(--sans);font-size:12.5px;color:var(--muted);letter-spacing:.04em;margin-top:14px;max-width:74ch;line-height:1.8}
+
+@media(max-width:720px){
+  .grid2{grid-template-columns:1fr}
+  .pair-badge{flex-direction:column;gap:18px}
+  .pull{margin:36px 0 0}
+  .area-row{grid-template-columns:1fr 60px;gap:10px}
+  .area-row .a-text{grid-column:1/-1}
+  .index-block{grid-template-columns:1fr;padding:34px 22px}
+}
+</style>
+</head>
+<body>
+
+<!-- ================= HERO / CIRUELA ================= -->
+<header class="plum-hero">
+  <div class="wrap">
+    <div class="logo-wrap"><img class="hero-logo" src="ty-logo-ciruela.png" alt="T&amp;Y — Match beyond love">
+      <span class="sheen" aria-hidden="true"></span>
+    </div>
+    <div class="kicker">Estudio de Compatibilidad · Numerología</div>
+    <h1>Elisabeth <em>&amp;</em> Luis</h1>
+    <p class="lead">Una lectura del vínculo a través del número: dos naturalezas que no se parecen y, por eso mismo, se completan.</p>
+    <div class="rule-hero"></div>
+    <div class="pair-badge">
+      <div class="p">Elisabeth<span class="n">8</span><span class="sub">Camino de vida</span></div>
+      <div class="heart">&amp;</div>
+      <div class="p">Luis<span class="n">5</span><span class="sub">Camino de vida</span></div>
+      <div class="heart">&rarr;</div>
+      <div class="p">Vínculo<span class="n">13/4</span><span class="sub">Vocación de cimiento</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ I ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">I</span> Los dos que llegan</div>
+    <h2>Dos maneras distintas de estar en el mundo</h2>
+    <p class="lead-p">Si la numerología solo mirara los caminos de vida, Elisabeth y Luis parecerían hechos para desencontrarse. Ella camina un <span class="num">17/8</span>: dirección, obra, autoridad, el impulso de construir algo que perdure. Él recorre un <span class="num">23/5</span>: movimiento, libertad, curiosidad, la necesidad de aire. Un ocho que quiere fijar y un cinco que quiere partir. Esa es la tensión de entrada — y también la promesa del vínculo.</p>
+    <p>Por debajo de esa diferencia, el mapa se enciende con números que hablan el mismo idioma. Elisabeth lleva en su alma un <span class="num">38/11</span>, la vibración maestra del idealista que sueña el amor en mayúsculas. Luis proyecta un <span class="num">92/11</span> y sostiene su actitud con el constructor <span class="num">22/22</span>. Los dos buscan en silencio lo mismo, un ideal que valga la pena: ella hacia dentro, como sensibilidad; él hacia fuera, como presencia.</p>
+    <div class="pull">No chocan porque quieran cosas opuestas. Chocan porque las quieren <em>al mismo tiempo</em> y a ritmo distinto.<small>Los caminos 8 y 5</small></div>
+  </div>
+</section>
+
+<!-- ============ II ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">II</span> Elisabeth Padilla Álvarez · 10 de abril de 1983</div>
+    <h2>La que construye con el corazón por delante</h2>
+    <p class="lead-p">Elisabeth es un <span class="num">17/8</span> que se vive menos como ambición de poder que como sentido de la obra: necesita que las cosas se hagan bien, con orden y con propósito. Su día de nacimiento, <span class="num">10/1</span>, la hace iniciadora e independiente, con una primera impresión de alguien que sabe a dónde va. Quien la encuentra de frente siente autoridad natural.</p>
+    <p>Pero su centro es otro. En las vocales de su nombre vive un <span class="num">38/11</span> —el once de la sensibilidad maestra, que convierte la intimidad en una necesidad casi espiritual—. No quiere un compañero: quiere un vínculo con alma, un proyecto que la haga parte de algo más grande que su éxito. Su personalidad <span class="num">57/3</span> le da la puerta amable: hacia fuera es cercana, expresiva, conversadora. Por ahí entra quien quiere conocerla de verdad.</p>
+    <p>Su madurez es un <span class="num">13/4</span> y su actitud un <span class="num">14/5</span>: aprende a poner orden y método (el 13) sin perder la fluidez y el encanto con que se relaciona (el 14). Y aquí va una recomendación de trabajo, no un diagnóstico: en su fecha no aparecen el <span class="num">2</span>, el <span class="num">5</span>, el <span class="num">6</span> ni el <span class="num">7</span>. Traducido a acciones, conviene que ejercite a propósito cuatro hábitos —no que le «falte» nada—: <strong>ceder y negociar sin perder su rumbo</strong> (el 2), <strong>soltar el control y acoger lo imprevisto</strong> (el 5), <strong>cuidar el hogar y lo cotidiano</strong> (el 6) y <strong>reservarse tiempo de introspección</strong> (el 7). Si los incorpora como práctica consciente, amplía su registro sin dejar de ser quien es.</p>
+    <div class="dialogue">
+      <h3>Su esencia en una línea</h3>
+      <p>Necesita sentirse necesaria dentro de algo que ella misma construyó — y que eso tenga corazón.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ III ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">III</span> Luis Mariano González Hernández · 12 de octubre de 1972</div>
+    <h2>El que llega con aire y se queda por la raíz</h2>
+    <p class="lead-p">Luis es un <span class="num">23/5</span> nacido para moverse: comunicador, adaptable, con la mano tendida hacia lo nuevo y la gente. Su día <span class="num">12/3</span> lo vuelve expresivo y magnético, de los que llenan una sala sin esforzarse. Pero quien se queda mirando descubre la trampa del cinco: por debajo de tanta fluidez hay un hombre que ha necesitado aprender a comprometerse con una sola dirección.</p>
+    <p>Y aquí aparece lo inesperado de su carta. Su actitud es un <span class="num">22/22</span> —el constructor maestro, el que levanta estructuras y las hace durar—. Es la paradoja que lo define: el cinco que huye convive con el veintidós que edifica. No es solo el que se va; es también el que más raíces sabe echar cuando el terreno le importa. Su personalidad <span class="num">92/11</span> confirma al líder que inspira, y su expresión <span class="num">144/9</span> añade la pieza que a veces se le escapa: necesita que lo suyo sirva a algo más grande que sí mismo.</p>
+    <p>Su madurez, un <span class="num">14/5</span>, le enseña a transformar la libertad en elección consciente. Su fecha concentra los unos —tres veces— y los doses: independencia y cooperación en tensión permanente. La recomendación equivalente, expresada como acción y no como carencia: en su fecha no aparecen el <span class="num">3</span>, el <span class="num">4</span>, el <span class="num">5</span>, el <span class="num">6</span> ni el <span class="num">8</span>. Le conviene ejercitar a propósito: <strong>expresarse y disfrutar con más soltura</strong> (el 3), <strong>aplicar disciplina a una sola dirección</strong> (el 4), <strong>cerrar la libertad con elecciones que no le den miedo</strong> (el 5), <strong>hacerse cargo del hogar y lo doméstico</strong> (el 6) y <strong>dar valor concreto a lo que construye</strong> (el 8). Si los integra como práctica consciente, convierte su energía en raíz sin perder su aire.</p>
+    <div class="dialogue">
+      <h3>Su esencia en una línea</h3>
+      <p>Parece que huye de atarse, pero en el fondo es un constructor que solo cede su libertad a quien le muestra un proyecto digno de ella.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IV ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">IV</span> Los cruces</div>
+    <h2>Dónde se rozan y dónde se complementan</h2>
+    <p class="lead-p">La lectura verdadera no está en los números de cada uno, sino en el cruce entre ambos. Y en esta pareja el cruce está cargado de señales que se responden.</p>
+    <p>Lo primero que hay que leer es el espejo: la <strong>expresión</strong> de Elisabeth, <span class="num">14/5</span>, reduce al mismo cinco del camino de Luis. No es coincidencia: es un imán estructural. Ella tiene en su manera de expresarse exactamente la vibración que él vive como destino. Él ve en ella, sin saberlo, a alguien que habla su mismo idioma de fondo.</p>
+    <p>Y a la inversa, la <strong>personalidad</strong> de Luis (<span class="num">92/11</span>) y su <strong>actitud</strong> (<span class="num">22/22</span>) son los maestros que Elisabeth lleva dentro (<span class="num">38/11</span> en el alma y <span class="num">22/22</span> en las vocales caldeas). Lo que en él ya es visible, en ella es anhelo callado. Él le muestra el camino de su propio potencial; ella le da el corazón que su construcción necesita.</p>
+    <div class="dialogue">
+      <h3>La tensión central</h3>
+      <p>Caminos <span class="num">8 ↔ 5</span>: el poder que fija frente a la libertad que parte. Cuando se desequilibra, ella lo vive como inmadurez y él la vive como control. Cuando se integra, ella le da una base sólida desde la que él puede explorar sin miedo a perderse, y él le devuelve aire, novedad y descanso de tanta exigencia.</p>
+    </div>
+    <div class="dialogue">
+      <h3>El puente emocional</h3>
+      <p>Almas <span class="num">11 ↔ 7</span>: la fusión idealista de Elisabeth y la profundidad interior de Luis. Ambos necesitan un vínculo con sentido, no decorativo. Pero hablan idiomas emocionales distintos, y eso se nota: él puede sentirse perseguido por la intensidad del once de ella; ella puede sentirse sola ante los silencios del siete de él. La llave no es que uno cambie de idioma, sino que aprendan a traducir el del otro.</p>
+    </div>
+    <div class="pull">El ocho de ella no quiere dominar al cinco de él. Quiere darle un hogar. Y el cinco de él no huye del ocho: huye de los ocho que no tienen corazón.<small>La integración de los dos caminos</small></div>
+  </div>
+</section>
+
+<!-- ============ V ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">V</span> El número del vínculo</div>
+    <h2>Una <em>13/4</em>: vocación de cimiento</h2>
+    <p class="lead-p">Al sumar sus dos caminos —<span class="num">8</span> y <span class="num">5</span>— el vínculo nace como un <span class="num">13/4</span>: el número de la construcción sobre terreno firme. Esta es, por definición, una relación hecha para <strong>edificar</strong>: para casa, para proyecto, para algo que se levanta ladrillo a ladrillo y perdura. No es una historia de fuegos artificiales; es una historia de cimientos.</p>
+    <p>El trece que la encabeza no es un peso ni una deuda: es un patrón a integrar. Dice que la relación pedirá <strong>disciplina y método</strong> para no quedarse en lo que se siente bien hoy, y que su mayor recompensa llegará a largo plazo, cuando lo construido demuestre que aguanta. El <span class="num">4</span> de su base es la vocación de hogar, estabilidad y trabajo compartido — exactamente lo que el once interior de Elisabeth anhela y lo que el veintidós constructor de Luis sabe hacer.</p>
+    <p>Las capas lo confirman. <strong>Expresión y personalidad de pareja</strong> son ambas <span class="num">14/5</span>: ante el mundo proyectan encanto, adaptación y ligereza. Pero su <strong>alma de pareja</strong> es un <span class="num">18/9</span> —vocación de entrega y de dar sentido a los demás— y su <strong>madurez</strong> cierra en <span class="num">27/9</span>: el vínculo madura hacia lo humanitario y lo espiritual, hacia dejar huella juntos.</p>
+    <div class="pull">Ligera por fuera, de cimiento por dentro, con alma de servicio. Ese es el contrato no escrito de esta unión.<small>Expresión 14/5 · Alma 18/9 · Madurez 27/9</small></div>
+  </div>
+</section>
+
+<!-- ============ VI · AREAS + ÍNDICE ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VI</span> El mapa del vínculo</div>
+    <h2>Diez áreas, una por una</h2>
+    <p class="lead-p">Cada área se puntúa de 0 a 10 con señales fijas de las dos cartas. La nota mide <strong>facilidad natural</strong>, no la calidad del amor ni el futuro.</p>
+
+    <div class="areas">
+      <div class="area-row"><div class="a-name">Atracción / magnetismo</div><div class="a-note">10</div><div class="a-text">Se reconocen en varios planos: hay espejos entre sus dimensiones, no solo atracción de superficie.</div></div>
+      <div class="area-row"><div class="a-name">Emocional / intimidad</div><div class="a-note">3</div><div class="a-text">Lenguajes distintos: ella pide fusión y palabra; él necesita procesar a solas. Exige traducción constante.</div></div>
+      <div class="area-row"><div class="a-name">Comunicación</div><div class="a-note">3</div><div class="a-text">Ritmos distintos al hablar y al callar. Sin acuerdos explícitos, el silencio se lee como desamor.</div></div>
+      <div class="area-row"><div class="a-name">Material / estabilidad</div><div class="a-note">4</div><div class="a-text">Ella asegura y ordena; él fluye. La fricción aparece en dinero, prioridades y autoridad.</div></div>
+      <div class="area-row"><div class="a-name">Pasión / sexual</div><div class="a-note null">Sin valoración</div><div class="a-text">La rúbrica no activa ninguna regla aquí, así que el área no computa: un cinco por ausencia de señales no es una medición de química.</div></div>
+      <div class="area-row"><div class="a-name">Espiritual / crecimiento</div><div class="a-note">10</div><div class="a-text">Comparten los maestros 11 y 22: el mismo hambre de sentido y de obra.</div></div>
+      <div class="area-row"><div class="a-name">Proyecto / legado</div><div class="a-note">7</div><div class="a-text">Vocación constructiva clara. Buena base para edificar algo que dure.</div></div>
+      <div class="area-row"><div class="a-name">Ritmos / timing</div><div class="a-note">4</div><div class="a-text">En 2026 están en fases distintas: ella abre ciclo, él cierra etapa. Decidir los tiempos juntos es la palanca.</div></div>
+      <div class="area-row"><div class="a-name">Fluidez / encaje</div><div class="a-note">4</div><div class="a-text">Convivir pide adaptación. La base es sólida; el encaje cotidiano no viene solo.</div></div>
+      <div class="area-row"><div class="a-name">Libertad de ser tú mismo</div><div class="a-note">6</div><div class="a-text">Pueden ser quienes son. El 13 y el 14 piden nombrar límites para que la libertad no se lea como distancia.</div></div>
+    </div>
+
+    <div class="index-block">
+      <div class="idx"><div class="v">68%</div><div class="l">A · Afinidad<br>según la rúbrica</div></div>
+      <div class="idx"><div class="v">61%</div><div class="l">B · Incorporando<br>ajustes de aprendizaje</div></div>
+      <div class="math" style="grid-column:1/-1">
+        Nueve áreas con señal; Pasión no computa por falta de señales. El detalle del cálculo está en el anexo técnico.
+      </div>
+    </div>
+
+    <p style="margin-top:34px"><strong>Cómo leer esta cifra.</strong> No mide si están hechos el uno para el otro ni predice un desenlace: mide cuánta facilidad natural tienen las áreas con señal para sostener una vida en común. El 100% corresponde a una pareja de referencia construida con las mismas reglas; ninguna real lo alcanza. <strong>A</strong> es la afinidad según la rúbrica; <strong>B</strong> incorpora los ajustes de aprendizaje pendientes. Si B queda cerca de A, el trabajo es poco; si se aleja, señala dónde está.</p>
+  </div>
+</section>
+
+<!-- ============ VII · MANUAL ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VII</span> Manual práctico del día a día</div>
+    <h2>Tres acuerdos que valen más que diez consejos</h2>
+    <p class="lead-p">Las áreas con nota más baja no piden carácter: piden procedimiento. Estos tres acuerdos están escritos para usarse.</p>
+
+    <div class="dialogue">
+      <h3>1 · Cómo retomar una discusión</h3>
+      <p>Cuando la tensión suba, cualquiera de los dos puede pedir <strong>veinte minutos de pausa</strong>. La condición es una sola: la conversación se retoma a una hora concreta y acordada, no «después». Ella no persigue; él no desaparece. Así el cinco de Luis consigue el aire que necesita sin que el ocho de Elisabeth lo lea como abandono — el patrón que hoy los enreda.</p>
+    </div>
+
+    <div class="dialogue">
+      <h3>2 · Cómo decidir un proyecto común</h3>
+      <p>Se decide en dos tiempos y con reparto explícito. Primero <strong>el qué</strong>: qué quieren construir, para qué y con qué horizonte. Después <strong>el cómo y el quién manda en qué</strong>: quién decide presupuesto, quién decide tiempos, quién decide a las personas. Dos liderazgos en una misma casa necesitan un mapa de autoridad escrito, o el 8 y el 22 se disputarán el timón.</p>
+    </div>
+
+    <div class="dialogue">
+      <h3>3 · Cómo respetar el espacio propio</h3>
+      <p>Una franja semanal para cada uno que <strong>no se negocia ni se explica</strong>. No es tiempo robado a la pareja: es la condición para que el cinco no huya y el once no se sienta abandonado. La regla que la hace funcionar es que sea fija: el espacio imprevisible se vive como fuga; el pactado, como confianza.</p>
+    </div>
+
+    <p style="margin-top:34px"><strong>Una nota sobre lo que no aparece.</strong> En la fecha de Elisabeth no están el 2, el 5, el 6 ni el 7; en la de Luis, el 3, el 4, el 5, el 6 ni el 8. No describe carencias de carácter: describe hábitos que ninguno practica por instinto. Los tres acuerdos están diseñados para eso.</p>
+  </div>
+</section>
+
+<!-- ============ VIII · KÁRMICOS Y MAESTROS ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">VIII</span> Lo que traen de fábrica</div>
+    <h2>Dos maestros compartidos y dos lecciones comunes</h2>
+    <p class="lead-p">Hay una coincidencia poco frecuente: <strong>los dos portan los maestros 11 y 22</strong>. No en el mismo lugar de la carta, pero sí en la misma casa.</p>
+    <p>En Elisabeth el once está en el alma y el veintidós en las vocales caldeas de su nombre. En Luis el once aparece en la personalidad y el veintidós en su actitud ante la vida. La lectura ya la apuntamos: <strong>lo que él hace carne, ella lo lleva como anhelo</strong>. De ahí una consecuencia hermosa y exigente: él puede mostrarle el camino de su potencial, y ella recordarle que la construcción sin sentido se vuelve cárcel.</p>
+    <p>Comparten además dos compuestos que la tradición lee como lecciones: el <span class="num">13</span>, la estructura —construir sin que el orden se vuelva control—, y el <span class="num">14</span>, la libertad bien usada —moverse sin huir—. Como los dos los portan, crecen y tropiezan en lo mismo. Luis suma el <span class="num">16</span> y el <span class="num">26</span>: idealización que se cae, responsabilidad que se elige. <strong>Se requiere:</strong> nombrar los límites antes de que duelan y revisar las expectativas antes de que decepcionen.</p>
+  </div>
+</section>
+
+<!-- ============ IX · TIMING ============ -->
+<section class="section">
+  <div class="wrap">
+    <div class="sec-eyebrow"><span class="roman">IX</span> El momento · ciclos de vida</div>
+    <h2>Dónde está cada uno hoy</h2>
+    <p class="lead-p">La compatibilidad no es solo quiénes son, sino en qué punto del camino se encuentran. En 2026 atraviesan fases que hablan idiomas distintos.</p>
+    <p>Elisabeth, a sus 43 años, transita su tercer pináculo, <span class="num">9/9</span>: una etapa de culminación, de entregar y de encontrar sentido en lo que trasciende el logro personal. Su año personal de 2026 es un <span class="num">15/6</span> — el año del hogar, del cuidado y de las relaciones. Es la ventana en la que su once interior pide con más fuerza un vínculo con raíz. Las circunstancias la empujan exactamente hacia lo que el número de esta pareja promete: cimiento.</p>
+    <p>Luis, a sus 54, vive su cuarto pináculo, <span class="num">2/2</span>: la etapa de la colaboración y la escucha, donde el cinco aprende que elegir no es perder. Su año personal <span class="num">23/5</span> sigue pidiendo movimiento, pero en una etapa en la que el cinco ya no quiere huir — quiere decidir. El año universal 2026, un <span class="num">1</span>, abre el ciclo de los comienzos.</p>
+    <p>Los ciclos se cruzan en un punto delicado: <strong>ella abre, él cierra</strong>. No es un presagio, es una asincronía concreta —y por eso «Ritmos» puntúa 4—. La palanca no es esperar a que coincidan, sino <strong>decidir los tiempos juntos</strong> en lugar de planear cada cambio en solitario.</p>
+  </div>
+</section>
+
+<!-- ============ X · SÍNTESIS ============ -->
+<section class="sintesis" style="background:linear-gradient(160deg,var(--plum) 0%,#3a1247 60%,var(--plum) 100%);color:var(--champagne);padding:90px 0">
+  <div class="wrap">
+    <div class="sec-eyebrow" style="color:var(--champagne)"><span class="roman" style="color:var(--rose)">X</span> Síntesis integradora</div>
+    <h2 style="color:#fff;font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,38px);line-height:1.18;margin:22px 0 20px">El hilo que los une</h2>
+    <p style="color:#ecd9c6;max-width:64ch;font-size:19px">Elisabeth y Luis forman una pareja de <strong>cimiento</strong>: no de la que se enciende y se apaga, sino de la que se levanta y dura. La tensión entre el ocho que fija y el cinco que parte es real, y será el examen recurrente de la relación. Pero bajo esa tensión hay un acuerdo profundo: los dos buscan, cada uno a su manera, un ideal con sentido — y cada uno le muestra al otro la mitad de sí mismo que le falta.</p>
+    <p style="color:#ecd9c6;max-width:64ch;font-size:19px;margin-top:18px">Ella le ofrece al cinco un hogar con corazón, no una jaula. Él le ofrece al ocho aire, alegría y descanso de la exigencia. Si no confunden la necesidad del otro con una falta —el espacio de él no es desamor, la intensidad de ella no es control—, este vínculo logra una combinación poco común: ser <em>sólido</em> y <em>vivo</em> a la vez.</p>
+    <div style="margin-top:44px;font-family:var(--display);font-size:clamp(20px,3.4vw,34px);font-weight:600;letter-spacing:.04em;color:var(--champagne);line-height:1.5">Construir <span style="color:var(--rose)">·</span> Crecer <span style="color:var(--rose)">·</span> Sentir <span style="color:var(--rose)">·</span> Servir <span style="color:var(--rose)">·</span> Permanecer</div>
+    <p style="color:#c9a;font-size:15px;margin-top:34px;font-family:var(--sans);max-width:64ch">Este informe describe tendencias, no destinos. La última palabra siempre es de los dos.</p>
+  </div>
+</section>
+
+<!-- ============ ANEXO ============ -->
+<section class="section annex">
+  <div class="wrap">
+    <div class="sec-eyebrow">Anexo · Detalle técnico</div>
+    <h2>La arquitectura de números</h2>
+    <p class="note">Sistema pitagórico y caldeo · notación compuesta/reducida conservada en todo el estudio · números maestros 11/22/33 · compuestos kármicos 13, 14, 16 y 26 leídos como patrones a integrar, nunca como deuda.</p>
+
+    <div class="grid2">
+      <div class="an-card">
+        <h4>Elisabeth · 10-4-1983</h4>
+        <table>
+          <tr><td class="row">Camino de vida</td><td>17/8</td></tr>
+          <tr><td class="row">Día de nacimiento</td><td>10/1</td></tr>
+          <tr><td class="row">Actitud · día + mes</td><td>14/5</td></tr>
+          <tr><td class="row">Expresión (36+28+31)</td><td>95/14/5</td></tr>
+          <tr><td class="row">Alma · vocales</td><td>38/11 ★</td></tr>
+          <tr><td class="row">Personalidad · consonantes</td><td>57/3</td></tr>
+          <tr><td class="row">Madurez · 8+5</td><td>13/4</td></tr>
+          <tr><td class="row">Caldea nombre</td><td>75/3</td></tr>
+          <tr><td class="row">Caldea vocales</td><td>22/22 ★</td></tr>
+          <tr><td class="row">Caldea consonantes</td><td>53/8</td></tr>
+        </table>
+      </div>
+      <div class="an-card">
+        <h4>Luis · 12-10-1972</h4>
+        <table>
+          <tr><td class="row">Camino de vida</td><td>23/5</td></tr>
+          <tr><td class="row">Día de nacimiento</td><td>12/3</td></tr>
+          <tr><td class="row">Actitud · día + mes</td><td>22/22 ★</td></tr>
+          <tr><td class="row">Expresión (16+35+43+50)</td><td>144/9</td></tr>
+          <tr><td class="row">Alma · vocales</td><td>52/7</td></tr>
+          <tr><td class="row">Personalidad · consonantes</td><td>92/11 ★</td></tr>
+          <tr><td class="row">Madurez · 5+9</td><td>14/5</td></tr>
+          <tr><td class="row">Caldea nombre</td><td>111/3</td></tr>
+          <tr><td class="row">Caldea vocales</td><td>41/5</td></tr>
+          <tr><td class="row">Caldea consonantes</td><td>70/7</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="grid2">
+      <div class="an-card">
+        <h4>Desafíos · |d−m| · |d−a| · |1−2| · |m−a|</h4>
+        <table>
+          <tr><td class="row">Elisabeth</td><td>3 · 2 · 1 · 1</td></tr>
+          <tr><td class="row">Luis</td><td>2 · 2 · 0 · 0</td></tr>
+        </table>
+      </div>
+      <div class="an-card">
+        <h4>Pináculos · cierre (36 − camino)</h4>
+        <table>
+          <tr><td class="row">Elisabeth · cierre 28</td><td>5/5 · 4/4 · 9/9 · 7/7</td></tr>
+          <tr><td class="row">Luis · cierre 31</td><td>4/4 · 4/4 · 8/8 · 2/2</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="an-card couple">
+      <h4>Números de pareja · suma de dimensiones</h4>
+      <table>
+        <tr><td class="row">Número de pareja · camino 8+5</td><td>13/4</td></tr>
+        <tr><td class="row">Expresión de pareja · 5+9</td><td>14/5</td></tr>
+        <tr><td class="row">Alma de pareja · 11+7</td><td>18/9</td></tr>
+        <tr><td class="row">Personalidad de pareja · 3+11</td><td>14/5</td></tr>
+        <tr><td class="row">Madurez de pareja · 13+14</td><td>27/9</td></tr>
+      </table>
+    </div>
+
+    <div class="an-card couple">
+      <h4>Espejos, maestros y kármicos</h4>
+      <table>
+        <tr><td class="row">Espejo estructural</td><td>Expresión Elisabeth 5 = Camino Luis 5</td></tr>
+        <tr><td class="row">Maestros Elisabeth</td><td>11 (alma) · 22 (caldea vocales)</td></tr>
+        <tr><td class="row">Maestros Luis</td><td>11 (personalidad) · 22 (actitud)</td></tr>
+        <tr><td class="row">Kármicos compartidos</td><td>13 y 14</td></tr>
+        <tr><td class="row">Kármicos solo de Luis</td><td>16 y 26</td></tr>
+      </table>
+    </div>
+
+    <div class="an-card couple">
+      <h4>Cómo se calcula el índice</h4>
+      <table>
+        <tr><td class="row">Áreas con señal</td><td>9 de 10</td></tr>
+        <tr><td class="row">Suma de sus notas</td><td>51</td></tr>
+        <tr><td class="row">Referencia de escala sobre esas áreas</td><td>75</td></tr>
+        <tr><td class="row">Índice A · 51 ÷ 75</td><td>68%</td></tr>
+        <tr><td class="row">Ajuste por carga kármica</td><td>−5</td></tr>
+        <tr><td class="row">Índice B · 46 ÷ 75</td><td>61%</td></tr>
+      </table>
+    </div>
+
+    <p class="mono-note">★ Número maestro (11/22/33) — vibración compuesta elevada, nunca «peso». Los compuestos 13, 14, 16 y 26 son patrones a integrar (estructura, libertad, idealización, responsabilidad), no deuda.</p>
+
+    <p class="gloss"><b>Compuesto / reducido</b> — la suma y su vibración raíz (35/8). <b>Maestro</b> — 11, 22 o 33: no se reduce. <b>Kármico</b> — compuesto (13, 14, 16, 19, 26) que marca una lección a integrar. <b>Pináculo</b> — fase vital de unos nueve años con un tema dominante. <b>Desafío</b> — la distancia entre los números del propio mapa: el músculo que la fecha viene a estirar. <b>Año personal</b> — el tema numérico del año en curso (día + mes + año universal). <b>Índice A / B</b> — afinidad según la rúbrica / afinidad incorporando ajustes de aprendizaje.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="brand">T<span class="amp">&amp;</span>Y</div>
+    <p class="foot-line">Estudio elaborado con la metodología canónica de numerología ORIGEN · sistema pitagórico y caldeo · branding T&amp;Y · Match beyond love.</p>
+  </div>
+</footer>
+
+</main>
+</body>
+</html>
