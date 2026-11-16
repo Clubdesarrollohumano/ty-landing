@@ -125,15 +125,6 @@ main{padding:0 0 30px}
 .sintesis .big-chain span{color:var(--rose)}
 .chain-rule{width:100%;max-width:64ch;height:1px;margin:40px auto 0;background:linear-gradient(90deg,transparent,rgba(242,210,190,.5),transparent)}
 
-/* ---------- índice de resonancia (síntesis) ---------- */
-.index-band{margin-top:44px;display:grid;grid-template-columns:repeat(5,1fr);gap:20px 26px;max-width:64ch;margin-left:auto;margin-right:auto}
-.index-band .i{text-align:left;border-left:1px solid rgba(242,210,190,.25);padding-left:14px}
-.index-band .i-v{font-family:var(--display);font-size:30px;font-weight:600;color:var(--champagne);line-height:1}
-.index-band .i-l{font-family:var(--sans);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);margin-top:8px;line-height:1.6}
-.index-total{margin-top:36px;padding-top:28px;border-top:1px solid rgba(242,210,190,.3);display:flex;align-items:baseline;justify-content:center;gap:20px}
-.index-total .t-v{font-family:var(--display);font-size:56px;font-weight:600;color:var(--champagne);line-height:1}
-.index-total .t-l{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--rose);max-width:26ch;text-align:left;line-height:1.7}
-
 /* ---------- anexo técnico (desplegable) ---------- */
 .annex{background:#f6efe4}
 .annex>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:16px;max-width:960px;margin:0 auto;padding:0 32px}
@@ -164,8 +155,6 @@ main{padding:0 0 30px}
   .pair-badge{flex-direction:column;gap:18px}
   .pull{margin:36px 0 0}
   .area-card{padding:24px 20px}
-  .index-band{grid-template-columns:repeat(2,1fr)}
-  .index-total{flex-direction:column;align-items:flex-start;gap:10px}
 }
 </style>
 </head>
@@ -301,9 +290,9 @@ main{padding:0 0 30px}
 <!-- ============ V · DIEZ ÁREAS ============ -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow"><span class="roman">V</span> Diez áreas para comprenderse y cuidarse</div>
-    <h2>Lectura y acuerdo, área por área</h2>
-    <p class="lead-p">Diez ejes del día a día, cada uno con su lectura y un acuerdo. Los acuerdos se ejecutan en una sentada y se comprueban. Elegid uno para empezar —no hacen falta los diez a la vez— y dadle dos semanas.</p>
+    <div class="sec-eyebrow"><span class="roman">V</span> Diez áreas del día a día</div>
+    <h2>Cómo se lleva esto a la convivencia</h2>
+    <p class="lead-p">Las diez áreas del vínculo, cada una con su lectura, su índice de afinidad simbólica (escala calibrada, azar = 50) y un acuerdo. Los acuerdos se ejecutan en una sentada y se comprueban. Elegid uno para empezar —no hacen falta los diez a la vez— y dadle dos semanas.</p>
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">I</span><h3>Atracción / magnetismo</h3><span class="area-pct">55%</span></div>
@@ -404,22 +393,6 @@ main{padding:0 0 30px}
     <h2>Lo que pueden construir juntos</h2>
     <p>Javi y Cintya no se parecen en la superficie y se reconocen en la estructura. Los cinco puentes de sus cartas dicen lo mismo por cinco caminos: él organiza lo que ella necesita que avance; ella escucha lo que él necesita que se comprenda. El constructor es él por camino y ella por alma; el explorador es ella por destino y él por expresión. Ninguno le pide al otro que cambie de naturaleza: le pide que la ejerza.</p>
     <p>Las diferencias no se maquillan: un ocho que fija y un cinco que se mueve necesitarán decidir, una y otra vez, qué se ancla y qué se deja volar. Pero ambos observan antes de responder, ambos cumplen lo que valoran, y 2027 les abre la misma puerta: un año nueve de cierre con dos etapas que cambian casi a la vez. El siguiente paso es concreto: elegid dos de los diez acuerdos —comunicación y material son buenos primeros candidatos— y dadles un mes; después, releed esta síntesis y elegid los dos siguientes.</p>
-    <div class="index-band">
-      <div class="i"><div class="i-v">55%</div><div class="i-l">Atracción</div></div>
-      <div class="i"><div class="i-v">72%</div><div class="i-l">Emocional</div></div>
-      <div class="i"><div class="i-v">50%</div><div class="i-l">Comunicación</div></div>
-      <div class="i"><div class="i-v">71%</div><div class="i-l">Material</div></div>
-      <div class="i"><div class="i-v">70%</div><div class="i-l">Sexualidad</div></div>
-      <div class="i"><div class="i-v">43%</div><div class="i-l">Espiritualidad</div></div>
-      <div class="i"><div class="i-v">64%</div><div class="i-l">Proyecto</div></div>
-      <div class="i"><div class="i-v">79%</div><div class="i-l">Ritmos</div></div>
-      <div class="i"><div class="i-v">56%</div><div class="i-l">Fluidez</div></div>
-      <div class="i"><div class="i-v">50%</div><div class="i-l">Libertad</div></div>
-    </div>
-    <div class="index-total">
-      <div class="t-v">61%</div>
-      <div class="t-l">Afinidad simbólica total · escala calibrada, azar = 50</div>
-    </div>
     <div class="big-chain">Observar <span>·</span> Entender <span>·</span> Acordar <span>·</span> Avanzar <span>·</span> Permanecer</div>
     <div class="chain-rule"></div>
   </div>
@@ -592,9 +565,8 @@ main{padding:0 0 30px}
         <tr><td class="row">Ritmos / ciclos</td><td>5.5/8 → 79%</td></tr>
         <tr><td class="row">Fluidez / encaje</td><td>4.0/8 → 56%</td></tr>
         <tr><td class="row">Libertad de ser uno mismo</td><td>3.5/8 → 50%</td></tr>
-        <tr><td class="row">Total</td><td>41.0/80 → 61%</td></tr>
       </table>
-      <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">Escala calibrada: % = 50 + 50 × (nota − azar) ÷ (techo − azar). Azar por enumeración exacta (total 29.5/80); techo global demostrado 78/80. Cada área suma cuatro ejes de resonancia entre posiciones de ambas cartas, incluido el eje V del número del vínculo (13/4) en Proyecto, y la regla de tensión fértil (raíces que suman 13 ó 14) en todos los ejes. Índice de afinidad simbólica: no mide la relación ni predice desenlaces.</p>
+      <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">Escala calibrada: % = 50 + 50 × (nota − azar) ÷ (techo − azar). Azar por enumeración exacta (referencia 29.5/80); techo global demostrado 78/80. Cada área suma cuatro ejes de resonancia entre posiciones de ambas cartas, incluido el eje V del número del vínculo (13/4) en Proyecto, y la regla de tensión fértil (raíces que suman 13 ó 14) en todos los ejes. Índice de afinidad simbólica: no mide la relación ni predice desenlaces.</p>
     </div>
 
     <p class="mono-note narrow">Glosario. Camino: orientación vital. Expresión: talentos y manera de actuar. Alma: motivaciones interiores. Personalidad: forma de mostrarse. Actitud: primera respuesta. Madurez: dirección de desarrollo. Pináculo: marco de una etapa de varios años. Período: etapa larga de vida. Desafío: tema de práctica. Equilibrio: recurso para afrontar tensión. Lección del nombre: valor ausente entre las letras, sin atribuir incapacidad. Maestro (11/22/33): vibración que se conserva solo en su posición, con su base cotidiana; no es rango ni superioridad. Compuesto kármico (13/14/16/19): patrón de aprendizaje a integrar, sin penalización.</p>
