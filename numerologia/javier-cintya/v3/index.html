@@ -3,17 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>T&Y — Compatibilidad numerológica · Javi & Cintya</title>
+<title>T&Y — Compatibilidad numerológica · Javi &amp; Cintya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
   --plum:#2C0A3E; --plum-light:#4A0E5C; --noir:#0B0A0C;
   --champagne:#F2D2BE; --rose:#C99480; --bronze:#8A5A41; --copper:#5E3322;
   --ink:#221b16; --muted:#6f6257; --card:#fffdf9; --bg:#faf6f0;
   --line:#e2d8c9;
-  --display:"Cinzel",serif; --serif:"Fraunces",Georgia,serif; --sans:"Instrument Sans",sans-serif;
+  --display:"Cinzel",serif; --serif:"Roboto",Georgia,serif; --sans:"Roboto",sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -39,7 +39,6 @@ a{color:inherit}
 .logo-wrap{position:relative;width:min(210px,60vw);margin:0 auto;display:block}
 .logo-wrap + .kicker{margin-top:36px}
 .logo-wrap .hero-logo{width:100%;filter:drop-shadow(0 10px 26px rgba(0,0,0,.5));animation:logoFloat 6.5s ease-in-out infinite}
-/* destello que recorre el metal (enmascarado a la silueta del logo) */
 .logo-wrap .sheen{position:absolute;inset:0;pointer-events:none;
   -webkit-mask-image:url("../ty-logo-ciruela.png");mask-image:url("../ty-logo-ciruela.png");
   -webkit-mask-size:100% auto;mask-size:100% auto;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
@@ -81,49 +80,40 @@ main{padding:0 0 30px}
 .sec-eyebrow::after{content:"";flex:1;height:1px;background:var(--line)}
 .section h2{font-family:var(--display);font-weight:500;font-size:clamp(26px,4vw,38px);line-height:1.18;margin:22px 0 20px;letter-spacing:.01em;color:var(--ink)}
 .section h2 em{font-style:normal;color:var(--copper)}
-.section p{max-width:70ch;margin:0 auto 0;color:#3a2f27}
+.section p{max-width:70ch;margin:0 auto 0;color:#3a2f27;font-size:18px}
 .section p+p{margin-top:18px}
-.section p.lead-p{font-size:20px;color:var(--ink);font-weight:400}
+.section p.lead-p{font-size:18px;color:var(--ink);font-weight:500}
 .section .num{font-family:var(--display);color:var(--copper);font-weight:600}
-.lead-num{font-family:var(--display);font-size:22px;color:var(--copper);font-weight:600;letter-spacing:.02em}
+.lead-num{font-family:var(--display);font-size:20px;color:var(--copper);font-weight:600;letter-spacing:.02em}
 
 .section h4{font-family:var(--display);font-size:17px;letter-spacing:.14em;font-weight:600;color:var(--copper);margin:34px auto 12px;max-width:70ch}
 .section h4+p{margin-top:0}
 
-/* pulldata / destaque numérico en prosa */
+/* pulldata / destaque en prosa */
 .dialogue{margin:34px auto 0;max-width:70ch;border-left:3px solid var(--rose);padding:6px 0 6px 24px}
 .dialogue+.dialogue{margin-top:26px}
 .dialogue h3{font-family:var(--display);font-size:17px;letter-spacing:.14em;font-weight:600;color:var(--copper);margin-bottom:10px}
-.dialogue p{font-size:17px;color:#3a2f27}
+.dialogue p{font-size:18px;color:#3a2f27}
 
 .pull{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,28px);line-height:1.45;color:var(--copper);max-width:26ch;margin:44px 0 0 auto;text-align:right;font-weight:400}
 .pull small{display:block;font-style:normal;font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:14px;letter-spacing:.05em}
 
-/* ---------- recuadro de práctica / acuerdo (línea roja fina) ---------- */
+/* ---------- recuadro de práctica / acuerdo ---------- */
 .practice{margin:22px auto 0;max-width:70ch;border:1px solid rgba(201,148,128,.55);background:rgba(201,148,128,.05);padding:18px 22px}
 .practice h5{font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze);margin-bottom:8px}
-.practice p{font-size:17px;color:#3a2f27}
+.practice p{font-size:18px;color:#3a2f27}
 
 /* ---------- diez áreas ---------- */
 .area-card{background:var(--card);border:1px solid var(--line);padding:30px 32px;margin-top:26px}
 .area-card:first-of-type{margin-top:34px}
-.area-card .area-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.area-card .area-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
 .area-card .area-roman{font-family:var(--display);font-size:16px;color:var(--bronze);letter-spacing:.08em}
 .area-card h3{font-family:var(--display);font-size:20px;font-weight:600;letter-spacing:.06em;color:var(--copper)}
-.area-card p{max-width:none;margin:0;font-size:17px}
+.area-card .area-def{font-family:var(--sans);font-size:13px;color:var(--muted);letter-spacing:.02em;margin:0 0 16px;max-width:none;font-style:italic}
+.area-card p{max-width:none;margin:0;font-size:18px}
 .area-card p+p{margin-top:14px}
 .area-card .practice{margin:20px 0 0;max-width:none}
 .area-card .area-head .area-pct{margin-left:auto;font-family:var(--display);font-size:24px;font-weight:600;color:var(--bronze);letter-spacing:.02em;white-space:nowrap}
-
-/* ---------- bloque maestros / síntesis ---------- */
-.sintesis{background:linear-gradient(160deg,var(--plum) 0%,#3a1247 60%,var(--plum) 100%);color:var(--champagne);border:none;padding:90px 0}
-.sintesis .sec-eyebrow{color:var(--champagne)}
-.sintesis .sec-eyebrow::after{background:rgba(242,210,190,.25)}
-.sintesis h2{color:#fff}
-.sintesis p{color:#ecd9c6;max-width:64ch;font-size:19px}
-.sintesis .big-chain{margin-top:44px;font-family:var(--display);font-size:clamp(20px,3.4vw,34px);font-weight:600;letter-spacing:.04em;color:var(--champagne);line-height:1.5}
-.sintesis .big-chain span{color:var(--rose)}
-.chain-rule{width:100%;max-width:64ch;height:1px;margin:40px auto 0;background:linear-gradient(90deg,transparent,rgba(242,210,190,.5),transparent)}
 
 /* ---------- anexo técnico (desplegable) ---------- */
 .annex{background:#f6efe4}
@@ -168,16 +158,16 @@ main{padding:0 0 30px}
     </div>
     <div class="kicker">Estudio de compatibilidad · Numerología</div>
     <h1>Javi <em>&amp;</em> Cintya</h1>
-    <p class="lead">Dos maneras de observar el mundo, dos necesidades que se responden y diez acuerdos para cuidarlas. Una lectura integral de sus cartas con su índice de afinidad simbólica.</p>
+    <p class="lead">Dos maneras de observar el mundo, dos necesidades que se responden y diez áreas para cuidarlas, cada una con su índice de afinidad y su acuerdo.</p>
     <div class="rule-hero"></div>
     <div class="pair-badge">
       <div class="p">Javi<span class="n">8</span><span class="sub">Camino de vida</span></div>
       <div class="heart">&amp;</div>
       <div class="p">Cintya<span class="n">5</span><span class="sub">Camino de vida</span></div>
       <div class="heart">→</div>
-      <div class="p">Ambos<span class="n">8</span><span class="sub">Año personal 2026</span></div>
+      <div class="p">Vínculo<span class="n">13/4</span><span class="sub">Número del vínculo</span></div>
     </div>
-    <p class="edition">Lectura integral · Índice de resonancia T&Y · Occidental, caldea y védica identificadas · 15 de noviembre de 2026</p>
+    <p class="edition">Lectura integral · Índice de resonancia T&amp;Y · 17 de noviembre de 2026</p>
   </div>
 </header>
 
@@ -198,19 +188,14 @@ main{padding:0 0 30px}
   <div class="wrap">
     <div class="sec-eyebrow"><span class="roman">I</span> Francisco Javier Vázquez Álvarez · 26 de agosto de 1981</div>
     <h2>El constructor que piensa antes de responder</h2>
-    <p class="lead-p">Javi recorre un Camino de vida <span class="num">17/8</span>, el número del constructor: quien organiza recursos y sostiene decisiones hasta ver un resultado. En su carta ese impulso aparece por partida doble, porque su Nacimiento es <span class="num">26/8</span>, que refuerza la misma facilidad para coordinar y mantener una decisión práctica. No es un ocho de mando; es un ocho de obra: lo suyo es que las cosas se hagan, y se hagan bien.</p>
+    <p class="lead-p">Javi recorre un Camino de vida <span class="num">17/8</span>, el del constructor: organizar recursos y sostener decisiones hasta ver el resultado. En su carta ese impulso aparece por partida doble, porque su Nacimiento es <span class="num">26/8</span>: la misma facilidad para coordinar y mantener una decisión práctica. No es un ocho de mando; es un ocho de obra. Su virtud es la ejecución: cuando Javi asume algo, tiende a hacerlo bien y a terminarlo.</p>
     <p>Su Expresión es <span class="num">23/5</span>, la del explorador: se comunica con facilidad, se adapta y propone alternativas; y su Personalidad <span class="num">21/3</span> lo muestra comunicativo, ingenioso y fácil de abordar. Construir y explorar no es contradicción, es flexibilidad: el constructor elige con qué quedarse y el explorador le recuerda que siempre hay más de una manera de llegar. Su nombre, además, concentra el talento del <span class="num">1</span>: la iniciativa, empezar y actuar por cuenta propia.</p>
-    <p>En el centro vive un Alma <span class="num">29/11</span>, un número maestro: el once de la sensibilidad. «El maestro idealista» no es una etiqueta, es una manera de explicar que Javi percibe matices que otros pasan por alto y necesita una conexión significativa y un trato cuidadoso. Su Actitud <span class="num">34/7</span>, la del buscador, lo lleva a observar y analizar antes de responder: lo que siente con intensidad no siempre se ve enseguida — primero lo comprende, después lo dice. Un maestro se atribuye solo a su posición: no es un rango.</p>
-    <p>Su Madurez <span class="num">13/4</span>, un compuesto kármico que no es castigo sino patrón a integrar, orienta hacia la constancia y la continuidad de los compromisos. Con los años, esta carta se dirige a organizar y sostener, sin que la sensibilidad del once quede fuera de la obra.</p>
-
-    <h4>Aprendizajes para crecer</h4>
-    <p>Las lecciones del nombre —valores ausentes entre sus letras— son el <span class="num">2</span> y el <span class="num">7</span>: temas de práctica, no carencias. La del dos propone cooperación y tacto, y su Alma once conserva la raíz dos, de modo que el tema vive en el centro de su carta; la del siete propone profundizar un conocimiento mediante estudio. Sus desafíos son <span class="num">0 · 7 · 7 · 7</span>; el tercero, el siete, es el principal y acompaña toda la vida. Nombra un tema, no un déficit: equilibrar el análisis con la confianza y abrirse a perspectivas que todavía no comprende del todo.</p>
-
-    <h4>Su recorrido y la etapa actual</h4>
-    <p>Un pináculo es una etapa de varios años que, en numerología, señala determinados aprendizajes y oportunidades de desarrollo. Javi atraviesa ahora el tercero, <span class="num">16/7</span>, desde el 26 de agosto de 2018 hasta antes del 26 de agosto de 2027: un marco de estudio e introspección. Su período activo es el <span class="num">8</span>, del 1 de enero de 2010 al 1 de enero de 2037: un marco prolongado de organización de recursos y realización de objetivos. La próxima transición llega el 26 de agosto de 2027, con el pináculo <span class="num">9/9</span>: una etapa de aportación a otros.</p>
-
-    <h4>La mirada de otras tradiciones</h4>
-    <p>En Cheiro, su nombre habitual Javi suma <span class="num">9/9</span>: energía y valentía; en la védica de Johari, <span class="num">9</span>, asociado a Marte: iniciativa y acción generosa con medida. La lectura védica de su fecha queda pendiente de comprobar el momento del nacimiento; mientras tanto se conserva la fecha oficial.</p>
+    <p>En el centro vive un Alma <span class="num">29/11</span>, un número maestro: el once de la sensibilidad. Javi percibe matices que otros pasan por alto y necesita una conexión significativa y un trato cuidadoso. Su Actitud <span class="num">34/7</span>, la del buscador, lo lleva a observar y analizar antes de responder: lo que siente con intensidad no siempre se ve enseguida — primero lo comprende, después lo dice.</p>
+    <p>Su Madurez <span class="num">13/4</span>, un compuesto kármico que no es castigo sino patrón a integrar, orienta hacia la constancia y la continuidad de los compromisos. Lo que esta carta pide trabajar es la confianza: su desafío principal es el <span class="num">7</span>, que invita a equilibrar el análisis con la apertura a perspectivas que todavía no comprende del todo. La regla práctica de un siete es una sola: pensar antes de responder, sí; cerrarse antes de escuchar, no.</p>
+    <div class="dialogue">
+      <h3>Su esencia en una línea</h3>
+      <p>Un constructor con alma de idealista: entiende primero, decide después, y sostiene lo que promete.</p>
+    </div>
   </div>
 </section>
 
@@ -220,83 +205,26 @@ main{padding:0 0 30px}
     <div class="sec-eyebrow"><span class="roman">II</span> Cintya Carolina Roman Carreño · 18 de julio de 1987</div>
     <h2>La exploradora con alma de constructora</h2>
     <p class="lead-p">Cintya recorre un Camino de vida <span class="num">23/5</span>, el del explorador: probar posibilidades, adaptarse y conservar un espacio de elección. El cinco no es dispersión; es una manera de aprender, probando experiencias y cambios sin abandonar los compromisos que decide sostener. Su Expresión es <span class="num">28/10/1</span>, la del pionero: proponer una dirección y ponerla en marcha. Combinadas, esas dos posiciones dibujan a alguien que no espera a que las cosas ocurran: explora opciones y, cuando elige una, la arranca.</p>
-    <p>Su interior guarda otra sorpresa. Su Alma es <span class="num">26/8</span>, la del constructor: necesita capacidad de decisión y ver que su esfuerzo produce avances — que lo que se habla se haga y que los acuerdos se cumplan. Su Personalidad <span class="num">20/2</span> la muestra accesible, atenta y dispuesta a escuchar, y su Actitud <span class="num">25/7</span> la lleva a observar y analizar antes de responder. Por dentro, construcción; por fuera, escucha.</p>
-    <p>Su Nacimiento <span class="num">18/9</span> añade sensibilidad para comprender necesidades ajenas, y su Madurez <span class="num">6</span> la inclina hacia acompañar y atender sin decidir por otros. El talento reiterado de su nombre es el <span class="num">9</span>: concentración de empatía y comprensión humana.</p>
-
-    <h4>Aprendizajes para crecer</h4>
-    <p>La lección de su nombre es el <span class="num">8</span>: administrar recursos con prudencia. Su carta regala un matiz: su Alma es <span class="num">26/8</span>, de modo que el ocho no está ausente — está en su centro; la lección propone una práctica consciente sobre algo que ya vive en ella. Sus desafíos son <span class="num">2 · 2 · 0 · 0</span>; el tercero, el cero, es el principal y acompaña toda la vida. Orienta a mantenerse fiel a sus valores y a convertir la empatía en ayuda concreta, revisando qué ayuda puede comprometer antes de decir que sí.</p>
-
-    <h4>Su recorrido y la etapa actual</h4>
-    <p>Cintya atraviesa su segundo pináculo, <span class="num">16/7</span>, desde el 18 de julio de 2018 hasta antes del 18 de julio de 2027: el mismo marco de introspección y estudio que el de Javi. Su período activo es el <span class="num">9</span>, del 1 de enero de 2019 al 1 de enero de 2046: un marco prolongado de aportación a otros. El 18 de julio de 2027 entra en el pináculo <span class="num">14/5</span>: una etapa de adaptación, exploración y apertura a cambios.</p>
-
-    <h4>La mirada de otras tradiciones</h4>
-    <p>En Cheiro, su nombre habitual Cintya suma <span class="num">15/6</span>: afecto, cuidado del trato y ambientes agradables. En la védica de Johari su lectura de fecha está completa: Psíquico <span class="num">9</span>, asociado a Marte —se percibe a sí misma con iniciativa y energía—, y Destino <span class="num">5</span>, asociado a Mercurio —curiosidad por aprender, facilidad para conversar e interés por experiencias diferentes—; su nombre habitual suma <span class="num">5</span>.</p>
+    <p>Su interior guarda otra sorpresa. Su Alma es <span class="num">26/8</span>, la del constructor: necesita capacidad de decisión y ver que su esfuerzo produce avances — que lo que se habla se haga y que los acuerdos se cumplan. Su Personalidad <span class="num">20/2</span> la muestra accesible, atenta y dispuesta a escuchar, y su Actitud <span class="num">25/7</span> la lleva a observar y analizar antes de responder. Por dentro, construcción; por fuera, escucha. Su Nacimiento <span class="num">18/9</span> añade sensibilidad para comprender necesidades ajenas, y su Madurez <span class="num">6</span> la inclina a acompañar y atender sin decidir por otros.</p>
+    <p>Su lección del nombre es el <span class="num">8</span>: administrar recursos con prudencia. Su carta regala un matiz: su Alma es <span class="num">26/8</span>, de modo que el ocho no está ausente — está en su centro; la lección propone una práctica consciente sobre algo que ya vive en ella. Su desafío principal es el <span class="num">0</span>: orienta a mantenerse fiel a sus principios de vida — decir la verdad, cumplir los compromisos, no dañar, no robar — y a convertir la empatía en ayuda concreta, revisando qué ayuda puede comprometer antes de decir que sí. Los principios no se negocian con la circunstancia: la circunstancia se ordena con los principios.</p>
+    <div class="dialogue">
+      <h3>Su esencia en una línea</h3>
+      <p>Explora el mundo por fuera y construye por dentro: una pionera que solo se queda donde los acuerdos se cumplen.</p>
+    </div>
   </div>
 </section>
 
-<!-- ============ III · INTEGRACIÓN ============ -->
+<!-- ============ III · DIEZ ÁREAS ============ -->
 <section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow"><span class="roman">III</span> El encuentro de sus cartas</div>
-    <h2>Cinco puentes entre dos cartas</h2>
-    <p class="lead-p">La lectura del vínculo no está en los números por separado, sino en los cruces: posiciones de una carta que responden a posiciones de la otra. Aquí el cálculo encuentra cinco, y ninguno es decorativo.</p>
-
-    <div class="dialogue">
-      <h3>Camino de Javi 8 ↔ Alma de Cintya 8</h3>
-      <p>Él vive como aprendizaje vital lo que ella necesita por dentro: Javi construye bases y sostiene decisiones; Cintya necesita que los acuerdos se cumplan y que su esfuerzo produzca avances. El roce posible: la decisión que afecta a ambos y la toma uno solo. La práctica: compartir por adelantado lo que cada uno piensa decidir.</p>
-    </div>
-
-    <div class="dialogue">
-      <h3>Expresión de Javi 5 ↔ Camino de Cintya 5</h3>
-      <p>La manera en que Javi se expresa —adaptándose y proponiendo alternativas— habla el idioma del destino de Cintya. El roce posible son los cambios de plan; la práctica es acordar las preguntas reales —frecuencia, gastos, temporadas de estabilidad— en lugar de asumir que explorar es abandonar.</p>
-    </div>
-
-    <div class="dialogue">
-      <h3>Alma de Javi 11 ↔ Personalidad de Cintya 2</h3>
-      <p>La sensibilidad del once de Javi encuentra en la personalidad dos de Cintya accesibilidad y escucha: comparten la raíz dos, sin que el maestro sea un rango ni el dos se convierta en su alma. La práctica: preguntar si se ha entendido bien antes de dar por compartido un sentimiento.</p>
-    </div>
-
-    <div class="dialogue">
-      <h3>Actitud 7 ↔ Actitud 7</h3>
-      <p>Los dos observan y analizan antes de responder: ninguno presiona al otro, y ambos comprenden el silencio que precede a una respuesta pensada. El cuidado: cuando los dos callan, un tema puede tardar en abrirse. La práctica: decir «necesito pensarlo» junto con una hora de regreso, para distinguir la pausa del abandono.</p>
-    </div>
-
-    <div class="dialogue">
-      <h3>Nacimiento de Javi 8 ↔ Alma de Cintya 8</h3>
-      <p>El matiz diario de Javi —coordinar y sostener decisiones prácticas— responde por segunda vez a la necesidad central de Cintya: el terreno donde esta pareja se reconoce es el de las cosas que avanzan.</p>
-    </div>
-
-    <h4>Diferencias que pueden aprender a cuidar</h4>
-    <p><span class="lead-num">Camino 8 ↔ camino 5.</span> El constructor fija, la exploradora se mueve: no es que uno quiera enjaular y la otra huir, es que sus ritmos de decisión son distintos. Decidan juntos qué merece quedar fijado y qué abierto, y revisen la lista. <span class="lead-num">Madurez 13/4 ↔ madurez 6.</span> Método frente a cuidado: pregunten qué necesita cada persona antes de repartir tareas, no repartan por costumbre. <span class="lead-num">Desafíos 7 ↔ 0.</span> Análisis y confianza junto a valores y acción: aprendizajes compatibles, no carencias certificadas.</p>
-
-    <div class="pull">Él organiza lo que ella necesita que avance. Ella escucha lo que él necesita que se comprenda.<small>La integración de las dos cartas</small></div>
-  </div>
-</section>
-
-<!-- ============ IV · TIMING ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-eyebrow"><span class="roman">IV</span> El momento · 2026 y 2027</div>
-    <h2>Sus próximos pasos</h2>
-
-    <h4>2026 · Año personal 8 para ambos</h4>
-    <p>Los dos atraviesan un año personal <span class="num">8</span>: administrar recursos, decidir y revisar resultados con responsabilidad — para Javi, afinar lo que su etapa y su período ya proponen; para Cintya, administrar con cuidado también lo que comparte o da. Como pareja, 2026 es un año para revisar qué funciona, qué sobra y qué decisión pendiente merece tomarse ya.</p>
-
-    <h4>2027 · Año personal 9 para ambos, y dos cambios de etapa</h4>
-    <p>Ambos pasarán a un año personal <span class="num">9</span>: completar pendientes, hacer balance y soltar lo que ya no sostienen. El año trae dos transiciones de pináculo: Javi entra en el <span class="num">9/9</span> el 26 de agosto de 2027 —su introspección da paso a la aportación a otros— y Cintya en el <span class="num">14/5</span> el 18 de julio de 2027 —abre una etapa de exploración y cambios. Él se abre hacia los demás justo cuando ella se abre hacia lo nuevo; antes de que termine 2027, conviene hacer juntos una lista corta de lo que quieren cerrar y otra de lo que quieren dejar abierto.</p>
-  </div>
-</section>
-
-<!-- ============ V · DIEZ ÁREAS ============ -->
-<section class="section">
-  <div class="wrap">
-    <div class="sec-eyebrow"><span class="roman">V</span> Diez áreas del día a día</div>
-    <h2>Cómo se lleva esto a la convivencia</h2>
-    <p class="lead-p">Las diez áreas del vínculo, cada una con su lectura, su índice de afinidad simbólica (escala calibrada, azar = 50) y un acuerdo. Los acuerdos se ejecutan en una sentada y se comprueban. Elegid uno para empezar —no hacen falta los diez a la vez— y dadle dos semanas.</p>
+    <div class="sec-eyebrow"><span class="roman">III</span> Diez áreas del vínculo</div>
+    <h2>Compatibilidad de pareja por área</h2>
+    <p class="lead-p">El encuentro de dos cartas no se lee en un solo número: se lee en diez áreas del día a día. Cada una lleva su índice de afinidad simbólica (escala calibrada, azar = 50) y un acuerdo para ejecutar. Los acuerdos se ejecutan en una sentada y se comprueban. Elegid uno para empezar —no hacen falta los diez a la vez— y dadle dos semanas.</p>
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">I</span><h3>Atracción / magnetismo</h3><span class="area-pct">55%</span></div>
-      <p>Javi se presenta con soltura y facilidad de trato (Personalidad <span class="num">3</span>) y la firmeza tranquila de quien sostiene lo que empieza (Camino <span class="num">8</span>); Cintya, accesible y atenta (Personalidad <span class="num">2</span>) y con iniciativa propia (Expresión <span class="num">1</span>). Los números no dicen cuándo nació la atracción; sí dicen cómo cuidarla: nombrándola — que cada uno diga qué gesto del otro le gusta.</p>
+      <p class="area-def">La primera impresión: cómo se presenta cada uno y qué del otro despierta interés y ganas de acercarse. Es el magnetismo del trato y la presencia — no el deseo físico, que vive en su propia área.</p>
+      <p>Javi se presenta con soltura y facilidad de trato (Personalidad <span class="num">3</span>) y la firmeza tranquila de quien sostiene lo que empieza (Camino <span class="num">8</span>); Cintya, accesible y atenta (Personalidad <span class="num">2</span>) y con iniciativa propia (Expresión <span class="num">1</span>). Aquí no hay un espejo exacto: hay dos presencias que se completan — él pone la firmeza, ella la cercanía. Los números no dicen cuándo nació la atracción; sí dicen cómo cuidarla: nombrándola.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Esta semana, cada uno escribe tres gestos del otro que valora y se los lee. La comprobación: que los gestos sean concretos —una escena, una frase— y no adjetivos.</p>
@@ -305,7 +233,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">II</span><h3>Emocional / sentimientos</h3><span class="area-pct">72%</span></div>
-      <p>Javi necesita conexión significativa y trato cuidadoso (Alma <span class="num">11</span>); Cintya, ver avances y sentir que los acuerdos se cumplen (Alma <span class="num">8</span>). Cuando algo pesa, el apoyo correcto no siempre es el mismo: a veces se quiere ser escuchado y a veces ayuda para ordenar opciones.</p>
+      <p class="area-def">Cómo siente cada uno, qué necesita para sentirse seguro y cómo se acompañan cuando algo pesa.</p>
+      <p>El puente más fuerte de esta pareja: la sensibilidad del once de Javi (Alma <span class="num">29/11</span>) encuentra en la personalidad dos de Cintya accesibilidad y escucha — comparten la raíz dos. Javi necesita conexión significativa y trato cuidadoso; Cintya, ver avances y sentir que los acuerdos se cumplen (Alma <span class="num">26/8</span>). La virtud: ambos pueden sostener al otro. Lo que hay que trabajar: no dar por compartido un sentimiento que no se ha confirmado — preguntad si se ha entendido bien. Cuando algo pesa, el apoyo correcto no siempre es el mismo: a veces se quiere ser escuchado y a veces ayuda para ordenar opciones.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Antes de empezar, preguntar: «¿Quieres que te escuche o que te ayude a ordenar opciones?». La comprobación: responder a la pregunta hecha, no a la que uno habría hecho.</p>
@@ -314,7 +243,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">III</span><h3>Comunicación</h3><span class="area-pct">50%</span></div>
-      <p>Los dos observan antes de responder (Actitud <span class="num">7</span> y <span class="num">7</span>) y los dos pueden callar: la comunicación de esta pareja no falla por gritos, fallaría por silencios que se acumulan. Javi expresa con soltura una vez que ha decidido hablar; Cintya escucha de verdad y necesita que su voz también se escuche.</p>
+      <p class="area-def">Cómo hablan, escuchan y resuelven malentendidos: qué dicen, qué callan y cuándo.</p>
+      <p>Los dos observan antes de responder (Actitud <span class="num">7</span> y <span class="num">7</span>) y los dos pueden callar: la comunicación de esta pareja no falla por gritos, fallaría por silencios que se acumulan. Javi expresa con soltura una vez que ha decidido hablar; Cintya escucha de verdad y necesita que su voz también se escuche. El cuidado: cuando los dos callan, un tema puede tardar en abrirse. La regla: decir «necesito pensarlo» junto con una hora de regreso, para distinguir la pausa del abandono.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Cuando uno necesite pensar, lo dice con hora de regreso: «Dame hasta mañana a las ocho». Al retomar, cada uno resume primero lo que entendió antes de responder. La comprobación: que el resumen del otro se acepte o se corrija antes de pasar al argumento.</p>
@@ -323,7 +253,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">IV</span><h3>Material / estabilidad</h3><span class="area-pct">71%</span></div>
-      <p>Javi ordena recursos y sostiene decisiones (Camino <span class="num">8</span>, Madurez <span class="num">13/4</span>); Cintya lleva la prudencia como práctica de su lección <span class="num">8</span>, y su Alma <span class="num">26/8</span> la inclina a exigir que los acuerdos se cumplan. Sin suponer cómo comparten hoy el dinero: esta pareja discute mejor con números y fechas que con impresiones, y su riesgo es la decisión unilateral.</p>
+      <p class="area-def">Cómo ordenan recursos, decisiones y compromisos prácticos: dinero, casa, responsabilidades.</p>
+      <p>El terreno donde esta pareja se reconoce: las cosas que avanzan. El Camino <span class="num">17/8</span> de Javi y su Nacimiento <span class="num">26/8</span> responden dos veces al Alma <span class="num">26/8</span> de Cintya: él coordina y sostiene decisiones prácticas; ella necesita que los acuerdos se cumplan y que el esfuerzo produzca avances. Se suman la prudencia que Cintya practica como lección <span class="num">8</span> y el método de la Madurez <span class="num">13/4</span> de Javi. La virtud: esta pareja discute mejor con números y fechas que con impresiones. El riesgo: la decisión que afecta a ambos y la toma uno solo — compartid por adelantado lo que cada uno piensa decidir.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Fijar juntos qué gasto requiere consulta previa —una cifra concreta— y qué queda a criterio de cada uno. La comprobación: una revisión mensual breve de lo gastado y lo pendiente, sin sorpresas.</p>
@@ -332,6 +263,7 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">V</span><h3>Sexualidad / deseo</h3><span class="area-pct">70%</span></div>
+      <p class="area-def">El deseo físico y la intimidad: preferencias, iniciativa y consentimiento — la conexión de los cuerpos.</p>
       <p>La lectura no mide intensidad ni frecuencia: orienta la conversación. Javi aporta sensibilidad y conexión significativa (Alma <span class="num">11</span>); Cintya, la exigencia de que lo acordado se cumpla y de que su voz se escuche (Alma <span class="num">8</span>). Preferencias, iniciativa, respuesta y consentimiento: ese es el único «cálculo» que vale.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
@@ -341,7 +273,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">VI</span><h3>Espiritualidad / crecimiento</h3><span class="area-pct">43%</span></div>
-      <p>Javi lleva un maestro idealista en el alma y un desafío <span class="num">7</span> que invita a abrir el análisis a la confianza; Cintya lleva el destino védico <span class="num">5</span> —curiosidad por aprender— y un desafío <span class="num">0</span> que pide convertir los valores en ayuda concreta. No se supone religión ni rango: ambos están en un camino de aprendizaje, cada uno con su énfasis.</p>
+      <p class="area-def">Cómo crece cada uno por dentro: ideales, sentido, aprendizaje y evolución personal.</p>
+      <p>La afinidad más baja de la carta, y conviene leerla con franqueza: cada uno crece por su cuenta. Javi lleva el desafío <span class="num">7</span> — equilibrar el análisis con la confianza — y un alma maestra que busca un ideal; Cintya lleva el desafío <span class="num">0</span> — mantenerse fiel a sus principios de vida y convertir la empatía en ayuda concreta. Son caminos distintos: uno profundiza por dentro, la otra actúa por fuera. No es una carencia: es un reparto. Lo que pide es respeto mutuo por la forma de crecer del otro, sin pretender que crezcan igual.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Compartir una práctica al mes: él puede traer un libro o una idea para estudiar; ella puede traer una experiencia o un lugar para probar. La comprobación: que al menos una de las dos prácticas ocurra de verdad.</p>
@@ -350,7 +283,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">VII</span><h3>Proyecto / legado</h3><span class="area-pct">64%</span></div>
-      <p>Él construye (<span class="num">8</span> y <span class="num">13/4</span>) y ella arranca (Expresión <span class="num">1</span>) con sentido humano (Nacimiento <span class="num">9</span>). El riesgo no es la falta de empuje, sino dos velocidades: ella propone y lanza; él ordena y sostiene — si no se reparten los papeles, uno acelera y el otro frena.</p>
+      <p class="area-def">Lo que construyen juntos: metas, planes y la obra común que deja huella.</p>
+      <p>Él construye (Camino <span class="num">8</span> y Madurez <span class="num">13/4</span>) y ella arranca (Expresión <span class="num">1</span>) con sentido humano (Nacimiento <span class="num">9</span>). El riesgo no es la falta de empuje, sino dos velocidades: ella propone y lanza; él ordena y sostiene — si no se reparten los papeles, uno acelera y el otro frena.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Si emprenden algo juntos, definir por escrito quién propone, quién ordena y cuándo se revisa el avance —una fecha concreta—. La comprobación: la fecha de revisión se cumple, aunque el proyecto cambie.</p>
@@ -359,7 +293,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">VIII</span><h3>Ritmos / ciclos</h3><span class="area-pct">79%</span></div>
-      <p>Los ciclos ya están leídos: 2026 es un <span class="num">8</span> para ambos, 2027 un <span class="num">9</span>, con las dos transiciones descritas. La lectura de ritmos se reduce a una práctica: alinear calendarios antes de que los ciclos los desalineen.</p>
+      <p class="area-def">Cómo se sincronizan los tiempos de cada uno: agendas, descansos, etapas y calendarios.</p>
+      <p>La sincronía más alta del estudio: los dos observan y analizan antes de responder, ninguno presiona al otro, y ambos comprenden el silencio que precede a una respuesta pensada. El riesgo de los ritmos parecidos es que se amontonan: dos personas que piensan antes de actuar pueden postergar decisiones. La práctica: alinear calendarios antes de que la agenda los desalinee.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Cada dos o tres meses, media hora de agenda: qué viene, qué se solapa y qué se pospone. La comprobación: que la cita ocurra, no que todo salga perfecto.</p>
@@ -368,7 +303,8 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">IX</span><h3>Fluidez / encaje</h3><span class="area-pct">56%</span></div>
-      <p>Los dos portan el <span class="num">5</span> (Expresión de Javi, Camino de Cintya) y los dos el <span class="num">7</span> en sus actitudes: improvisación con análisis. Un plan que cambia puede tardar en digerirse porque ambos quieren pensarlo — y está bien, si se dice: la fluidez se pierde cuando el cambio se comunica tarde.</p>
+      <p class="area-def">El encaje del día a día: adaptarse a los cambios de plan sin que la relación se desajuste.</p>
+      <p>Los dos portan el <span class="num">5</span> (Expresión de Javi, Camino de Cintya) y los dos el <span class="num">7</span> en sus actitudes: improvisación con análisis. La manera en que Javi se expresa —adaptándose y proponiendo alternativas— habla el idioma del destino de Cintya. Un plan que cambia puede tardar en digerirse porque ambos quieren pensarlo — y está bien, si se dice: la fluidez se pierde cuando el cambio se comunica tarde. El cuidado con los cambios de plan: acordad las preguntas reales —frecuencia, gastos, temporadas de estabilidad— en lugar de asumir que explorar es abandonar.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Si un plan cambia, avisar en cuanto se sepa y pedir el tiempo necesario con fecha: «¿Te parece si lo hablamos mañana?». La comprobación: que el aviso llegue antes del día del plan.</p>
@@ -377,24 +313,34 @@ main{padding:0 0 30px}
 
     <div class="area-card">
       <div class="area-head"><span class="area-roman">X</span><h3>Libertad de ser uno mismo</h3><span class="area-pct">50%</span></div>
-      <p>Javi conserva un espacio de elección (Expresión <span class="num">5</span>); Cintya decide dirección propia (Expresión <span class="num">1</span>) y explora por camino (<span class="num">5</span>). Dos personas así necesitan un acuerdo explícito sobre qué se decide solo y qué se comparte — sin que «compartir» signifique pedir permiso.</p>
+      <p class="area-def">El espacio de cada uno para ser quien es: qué se decide solo, qué se avisa y qué se comparte.</p>
+      <p>La tensión central de la pareja, dicha con claridad: camino <span class="num">8</span> frente a camino <span class="num">5</span>. El constructor fija, la exploradora se mueve. No es que uno quiera enjaular y la otra huir: es que sus ritmos de decisión son distintos. Javi conserva un espacio de elección (Expresión <span class="num">5</span>); Cintya decide dirección propia (Expresión <span class="num">1</span>) y explora por camino (<span class="num">5</span>). La ley de esta área: decidid juntos qué merece quedar fijado y qué abierto, y revisad la lista. «Compartir» no significa pedir permiso: significa avisar, consultar y cumplir lo acordado.</p>
       <div class="practice">
         <h5>Acuerdo</h5>
         <p>Cada uno escribe su lista corta: lo que decide solo, lo que avisa y lo que comparte antes de decidir. Intercambiad las listas y ajustadlas. La comprobación: durante un mes, que ninguna decisión compartida aparezca como hecho consumado.</p>
       </div>
     </div>
+
+    <div class="dialogue">
+      <h3>Por qué dos personas eligen estar juntas</h3>
+      <p>El deseo de estar con la otra persona nace de una compatibilidad alta en las áreas que más importan a cada quien. Una pareja puede tener tres áreas altas y poca afinidad en el resto, y elegir estar junta precisamente porque esas áreas son sus prioridades. Por eso hay parejas con menos compatibilidad en la suma que permanecen juntas con más convicción que otras más compatibles en general: no se elige por el promedio, se elige por lo que a cada uno le importa.</p>
+    </div>
+    <div class="pull">Él organiza lo que ella necesita que avance. Ella escucha lo que él necesita que se comprenda.<small>La integración de las dos cartas</small></div>
   </div>
 </section>
 
-<!-- ============ SÍNTESIS ============ -->
-<section class="sintesis">
+<!-- ============ IV · PRÓXIMOS PASOS ============ -->
+<section class="section">
   <div class="wrap">
-    <div class="sec-eyebrow">Síntesis integradora</div>
-    <h2>Lo que pueden construir juntos</h2>
-    <p>Javi y Cintya no se parecen en la superficie y se reconocen en la estructura. Los cinco puentes de sus cartas dicen lo mismo por cinco caminos: él organiza lo que ella necesita que avance; ella escucha lo que él necesita que se comprenda. El constructor es él por camino y ella por alma; el explorador es ella por destino y él por expresión. Ninguno le pide al otro que cambie de naturaleza: le pide que la ejerza.</p>
-    <p>Las diferencias no se maquillan: un ocho que fija y un cinco que se mueve necesitarán decidir, una y otra vez, qué se ancla y qué se deja volar. Pero ambos observan antes de responder, ambos cumplen lo que valoran, y 2027 les abre la misma puerta: un año nueve de cierre con dos etapas que cambian casi a la vez. El siguiente paso es concreto: elegid dos de los diez acuerdos —comunicación y material son buenos primeros candidatos— y dadles un mes; después, releed esta síntesis y elegid los dos siguientes.</p>
-    <div class="big-chain">Observar <span>·</span> Entender <span>·</span> Acordar <span>·</span> Avanzar <span>·</span> Permanecer</div>
-    <div class="chain-rule"></div>
+    <div class="sec-eyebrow"><span class="roman">IV</span> Resumen de atención</div>
+    <h2>Sus próximos pasos</h2>
+    <p class="lead-p">Sin pronósticos: lo que sigue es una lista de atención, no de futuro. Estas son las cinco vigilancias de esta pareja — los puntos donde dos buenas intenciones se desvían si nadie las cuida.</p>
+    <p><span class="lead-num">1 · Las decisiones de uno solo.</span> El riesgo material: decidir lo que afecta a ambos sin avisar. Regla: se comparte por adelantado lo que cada uno piensa decidir, y lo que afecta a la casa se consulta.</p>
+    <p><span class="lead-num">2 · Los silencios que se acumulan.</span> El riesgo de comunicación: dos sietes que callan. Regla: «necesito pensarlo» siempre con hora de regreso.</p>
+    <p><span class="lead-num">3 · Los cambios de plan.</span> El riesgo de fluidez: el cinco que cambia y el siete que necesita digerir. Regla: avisar en cuanto se sepa y acordar las preguntas reales —frecuencia, gastos, temporadas de estabilidad.</p>
+    <p><span class="lead-num">4 · Las dos velocidades.</span> El riesgo de proyecto: ella lanza, él ordena. Regla: repartir papeles por escrito —quién propone, quién ordena, cuándo se revisa— y cumplir la fecha de revisión.</p>
+    <p><span class="lead-num">5 · Los calendarios.</span> El riesgo de ritmos: dos personas que piensan antes de actuar pueden postergar. Regla: media hora de agenda cada dos o tres meses.</p>
+    <p>El paso concreto: elegid dos de los diez acuerdos —comunicación y material son buenos primeros candidatos— y dadles un mes; después, releed esta guía y elegid los dos siguientes.</p>
   </div>
 </section>
 
@@ -402,7 +348,7 @@ main{padding:0 0 30px}
 <details class="section annex">
   <summary><h2>La arquitectura de números · consulta del estudio</h2></summary>
   <div class="wrap annex-inner">
-    <p class="note narrow">Notación compuesta/reducida. Las escuelas se interpretan por separado: un mismo valor en posiciones distintas no significa lo mismo, y las coincidencias entre escuelas no se suman como pruebas independientes. Referencia del cálculo: 15 de noviembre de 2026.</p>
+    <p class="note narrow">Notación compuesta/reducida. Un mismo valor en posiciones distintas no significa lo mismo. Referencia del cálculo: 15 de noviembre de 2026.</p>
 
     <div class="grid2">
       <div class="an-card">
@@ -442,7 +388,9 @@ main{padding:0 0 30px}
           <tr><td class="row">Lecciones del nombre</td><td>2 · 7</td></tr>
           <tr><td class="row">Maestros en posiciones centrales</td><td>Alma: 11/2</td></tr>
           <tr><td class="row">Compuestos kármicos centrales</td><td>Madurez: 13/4</td></tr>
+          <tr><td class="row">Desafíos</td><td>0 · 7 · 7 · 7</td></tr>
         </table>
+        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">El tercer desafío es principal y acompaña toda la vida.</p>
       </div>
       <div class="an-card">
         <h4>Recursos y aprendizajes · Cintya</h4>
@@ -452,103 +400,9 @@ main{padding:0 0 30px}
           <tr><td class="row">Lecciones del nombre</td><td>8</td></tr>
           <tr><td class="row">Maestros en posiciones centrales</td><td>Ninguno</td></tr>
           <tr><td class="row">Compuestos kármicos centrales</td><td>Ninguno</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="an-card">
-        <h4>Pináculos · Javi</h4>
-        <table>
-          <tr><td class="row">26/08/1981 hasta antes de 26/08/2009</td><td>16/7</td></tr>
-          <tr><td class="row">26/08/2009 hasta antes de 26/08/2018</td><td>9/9</td></tr>
-          <tr><td class="row">Etapa actual · 26/08/2018 hasta antes de 26/08/2027</td><td>16/7</td></tr>
-          <tr><td class="row">26/08/2027 en adelante</td><td>9/9</td></tr>
-        </table>
-      </div>
-      <div class="an-card">
-        <h4>Pináculos · Cintya</h4>
-        <table>
-          <tr><td class="row">18/07/1987 hasta antes de 18/07/2018</td><td>16/7</td></tr>
-          <tr><td class="row">Etapa actual · 18/07/2018 hasta antes de 18/07/2027</td><td>16/7</td></tr>
-          <tr><td class="row">18/07/2027 hasta antes de 18/07/2036</td><td>14/5</td></tr>
-          <tr><td class="row">18/07/2036 en adelante</td><td>14/5</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="an-card">
-        <h4>Períodos · Javi</h4>
-        <table>
-          <tr><td class="row">26/08/1981 hasta antes de 01/01/2010</td><td>8</td></tr>
-          <tr><td class="row">Período actual · 01/01/2010 hasta antes de 01/01/2037</td><td>8</td></tr>
-          <tr><td class="row">01/01/2037 en adelante</td><td>1</td></tr>
-        </table>
-      </div>
-      <div class="an-card">
-        <h4>Períodos · Cintya</h4>
-        <table>
-          <tr><td class="row">18/07/1987 hasta antes de 01/01/2019</td><td>7</td></tr>
-          <tr><td class="row">Período actual · 01/01/2019 hasta antes de 01/01/2046</td><td>9</td></tr>
-          <tr><td class="row">01/01/2046 en adelante</td><td>7</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="an-card">
-        <h4>Desafíos y años personales · Javi</h4>
-        <table>
-          <tr><td class="row">Desafíos</td><td>0 · 7 · 7 · 7</td></tr>
-          <tr><td class="row">Año personal 2026</td><td>8</td></tr>
-          <tr><td class="row">Año personal 2027</td><td>9</td></tr>
-        </table>
-        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">El tercer desafío es principal y acompaña toda la vida; los desafíos no tienen las fechas de los pináculos.</p>
-      </div>
-      <div class="an-card">
-        <h4>Desafíos y años personales · Cintya</h4>
-        <table>
           <tr><td class="row">Desafíos</td><td>2 · 2 · 0 · 0</td></tr>
-          <tr><td class="row">Año personal 2026</td><td>8</td></tr>
-          <tr><td class="row">Año personal 2027</td><td>9</td></tr>
         </table>
-        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">El tercer desafío es principal y acompaña toda la vida; los desafíos no tienen las fechas de los pináculos.</p>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="an-card">
-        <h4>Caldea · Cheiro · Javi</h4>
-        <table>
-          <tr><td class="row">Nombre habitual</td><td>Javi</td></tr>
-          <tr><td class="row">Compuesto y raíz</td><td>9/9</td></tr>
-        </table>
-      </div>
-      <div class="an-card">
-        <h4>Caldea · Cheiro · Cintya</h4>
-        <table>
-          <tr><td class="row">Nombre habitual</td><td>Cintya</td></tr>
-          <tr><td class="row">Compuesto y raíz</td><td>15/6</td></tr>
-        </table>
-      </div>
-    </div>
-
-    <div class="grid2">
-      <div class="an-card">
-        <h4>Védica · Harish Johari · Javi</h4>
-        <table>
-          <tr><td class="row">Nombre habitual · Javi</td><td>9</td></tr>
-        </table>
-        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">La fecha de la lectura védica queda pendiente: es necesario comprobar el momento del nacimiento. Se conserva la fecha oficial en la carta occidental.</p>
-      </div>
-      <div class="an-card">
-        <h4>Védica · Harish Johari · Cintya</h4>
-        <table>
-          <tr><td class="row">Nombre habitual · Cintya</td><td>5</td></tr>
-          <tr><td class="row">Psíquico · Marte</td><td>9</td></tr>
-          <tr><td class="row">Destino · Mercurio</td><td>5</td></tr>
-        </table>
+        <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">El tercer desafío es principal y acompaña toda la vida.</p>
       </div>
     </div>
 
@@ -569,8 +423,7 @@ main{padding:0 0 30px}
       <p style="font-family:var(--sans);font-size:13px;color:var(--muted);margin-top:12px">Escala calibrada: % = 50 + 50 × (nota − azar) ÷ (techo − azar). Azar por enumeración exacta (referencia 29.5/80); techo global demostrado 78/80. Cada área suma cuatro ejes de resonancia entre posiciones de ambas cartas, incluido el eje V del número del vínculo (13/4) en Proyecto, y la regla de tensión fértil (raíces que suman 13 ó 14) en todos los ejes. Índice de afinidad simbólica: no mide la relación ni predice desenlaces.</p>
     </div>
 
-    <p class="mono-note narrow">Glosario. Camino: orientación vital. Expresión: talentos y manera de actuar. Alma: motivaciones interiores. Personalidad: forma de mostrarse. Actitud: primera respuesta. Madurez: dirección de desarrollo. Pináculo: marco de una etapa de varios años. Período: etapa larga de vida. Desafío: tema de práctica. Equilibrio: recurso para afrontar tensión. Lección del nombre: valor ausente entre las letras, sin atribuir incapacidad. Maestro (11/22/33): vibración que se conserva solo en su posición, con su base cotidiana; no es rango ni superioridad. Compuesto kármico (13/14/16/19): patrón de aprendizaje a integrar, sin penalización.</p>
-    <p class="mono-note narrow">Escuelas identificadas: base occidental por componentes (Decoz); caldea de Cheiro y védica de Harish Johari como lecturas complementarias del nombre habitual y de la fecha. No se promedian escuelas ni se trata su coincidencia como dos pruebas independientes. Las asociaciones planetarias védicas son simbólicas.</p>
+    <p class="mono-note narrow">Glosario. Camino: orientación vital. Expresión: talentos y manera de actuar. Alma: motivaciones interiores. Personalidad: forma de mostrarse. Actitud: primera respuesta. Madurez: dirección de desarrollo. Desafío: tema de práctica. Equilibrio: recurso para afrontar tensión. Lección del nombre: valor ausente entre las letras, sin atribuir incapacidad. Maestro (11/22/33): vibración que se conserva solo en su posición, con su base cotidiana; no es rango ni superioridad. Compuesto kármico (13/14/16/19): patrón de aprendizaje a integrar, sin penalización.</p>
     <p class="mono-note narrow">Esta lectura describe tendencias a partir de fechas y nombres; no determina lo que sienten ni las decisiones que tomarán.</p>
   </div>
 </details>
@@ -579,7 +432,7 @@ main{padding:0 0 30px}
 <footer class="footer">
   <div class="wrap">
     <div class="brand">T<span style="color:var(--rose)">&amp;</span>Y</div>
-    <p class="foot-line">Estudio de compatibilidad numerológica · método integral T&Y — base occidental, caldea y védica identificadas · 15 de noviembre de 2026.<br>Describe tendencias, no destinos.</p>
+    <p class="foot-line">Estudio de compatibilidad numerológica · método integral T&Y · base occidental · 17 de noviembre de 2026.<br>Describe tendencias, no destinos.</p>
   </div>
 </footer>
 
