@@ -1,0 +1,24 @@
+/* Match Beyond Love — oro cálido y morados, 22/11/2026. */
+:root{--bg:#10051b;--bg-soft:#21102e;--panel:#291239;--card:#251133;--ink:#fcf7ff;--muted:#d3c5df;--accent:#e5bd68;--accent-ink:#f7d995;--rose:#e5bd68;--gold:#e5bd68;--line:#644275;--dark:#0d0316;--purple:#55206c;--metal:linear-gradient(110deg,#a97426,#f7d995 38%,#d4a348 78%,#edcb82)}
+body{background:radial-gradient(ellipse 95% 720px at 25% 4%,#58216caa,transparent 74%),radial-gradient(ellipse 70% 950px at 94% 40%,#63257866,transparent 78%),linear-gradient(155deg,#10051b,#0d0316 52%,#230c32);background-repeat:no-repeat}
+.hero{background:radial-gradient(ellipse at 80% 20%,#61227655,transparent 70%)}
+.hero-logo img{width:min(600px,100%);height:auto;max-width:100%;border-radius:18px;filter:none}
+.header .brand img{width:240px;height:auto;border-radius:12px}.footer .brand img{width:200px;height:auto;border-radius:12px}
+.light,.pricing,.final,.quotes{background:radial-gradient(ellipse at 95% 0,#51206466,transparent 70%),#1c0a29}
+.guard,.level{background:#251133;border-color:var(--line)}
+.btn:not(.ghost),.button{background:var(--metal);color:#1a0f04;border-color:#e5bd68;box-shadow:0 6px 22px #0004}
+.btn:not(.ghost):hover,.button:hover{background:#f7d995;color:#1a0f04}
+.plum-hero,.vedic-hero{--rose:#e5bd68;--champagne:#f7d995;background:radial-gradient(ellipse at 50% 25%,#66257c,transparent 65%),linear-gradient(145deg,#1d082c,#0d0316)}
+.plum-hero .logo-wrap,.vedic-hero .logo-wrap{width:min(460px,84vw);margin-inline:auto}
+.plum-hero .hero-logo,.vedic-hero .hero-logo{width:100%;height:auto;animation:none;filter:none;border-radius:14px}.logo-wrap .sheen{display:none}
+.plum-hero .brand img,.vedic-hero .brand img,footer .brand img{display:block;width:min(360px,76vw);height:auto;margin:auto;border-radius:12px}
+body.mbl-report{--bg:#f9f4fc;--ink:#291735;--muted:#68546e;--card:#fffcff;--line:#ded0e7;--rose:#806025;--bronze:#80581f;--copper:#65451a;--champagne:#f7d995;background:#f9f4fc}
+body.mbl-report footer{background:#1c0a29;color:#f7d995}
+:focus-visible{outline-color:#e5bd68}
+@media(max-width:640px){.header .brand img{width:166px}.header{gap:14px}.hero-logo img{width:min(460px,100%)}.footer .brand img{width:200px}}
+@media(prefers-reduced-motion:reduce){.hero-logo{animation:none!important}}
+@media(forced-colors:active){body,.hero,.light,.pricing,.final,.quotes{background:Canvas}}
+
+
+/* La navegación móvil ocupa su propia línea encima del logo. */
+@media(max-width:640px){body>header:not(.header){position:relative;min-height:54px;padding:14px 28px 8px}body>header:not(.header)+main>.hero{padding-top:10px}}
