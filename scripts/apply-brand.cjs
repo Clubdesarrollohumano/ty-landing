@@ -4,6 +4,9 @@ const fs=require('node:fs'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),spec=fs.readFileSync(path.join(root,'BRAND_MBL_2026-11-22.md'),'utf8');
 const css=spec.match(/```css\s*([\s\S]*?)```/)[1];
 fs.writeFileSync(path.join(root,'brand/match-theme-20261122.css'),css);
+const desktopSpec=spec.split('<!-- desktop-install:start -->')[1];
+const desktop=JSON.parse(desktopSpec.match(/```json\s*([\s\S]*?)```/)[1]);
+fs.writeFileSync(path.join(root,'brand/desktop-install.css'),desktopSpec.match(/```css\s*([\s\S]*?)```/)[1]);
 function visit(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){if(e.name.startsWith('.')||['scripts','brand'].includes(e.name))continue;const p=path.join(dir,e.name);if(e.isDirectory()){visit(p);continue;}if(!['index.html','mujeres.html','revision-2026-10-06/index.html','revision-2026-10-06/mujeres.html'].includes(path.relative(root,p).replaceAll('\\','/')))continue;let html=fs.readFileSync(p,'utf8').replaceAll('match-beyond-love.png','match-beyond-love-transparent.png');if(!/<\/head>/i.test(html))continue;
 html=html.replace(/<link rel="stylesheet" href="\/ty-landing\/brand\/match-theme(?:-[0-9]+)?\.css[^\"]*">\s*/g,'');
 html=html.replace(/<\/head>/i,'<link rel="stylesheet" href="/ty-landing/brand/match-theme-20261122.css?v=20261122-gold">\n</head>');
@@ -11,6 +14,14 @@ html=html.replace(/(<img\b[^>]*\bsrc=")[^"]*(?:ty[-_]logo|TY_logo)[^"]*(")/gi,'$
 html=html.replace(/(<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*href=")[^"]*(")/gi,'$1/ty-landing/brand/match-symbol.png?v=20261122-gold$2');
 html=html.replace(/(<meta\b[^>]*(?:property|name)="(?:og:image|twitter:image)"[^>]*content=")[^"]*(")/gi,'$1https://clubdesarrollohumano.github.io/ty-landing/brand/match-beyond-love-transparent.png?v=20261122-gold$2');
 html=html.replace(/content="#0b0a0e"/g,'content="#0d0316"');
+if(path.relative(root,p).replaceAll('\\','/').startsWith('revision-2026-10-06/')){
+ html=html.replace(/<a\b[^>]*\bdata-desktop-install\b[^>]*>[\s\S]*?<\/a>/g,'').replace(/<link rel="stylesheet" href="\/ty-landing\/brand\/desktop-install\.css[^\"]*">\s*/g,'');
+ const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const download=className=>'<a class="'+className+'" data-desktop-install href="'+escape(desktop.url)+'">'+escape(desktop.label)+'</a>';
+ html=html.replace(/<\/head>/i,'<link rel="stylesheet" href="/ty-landing/brand/desktop-install.css?v=20261122-match">\n</head>');
+ html=html.replace(/(<div class="actions">[\s\S]*?)(<\/div>)/,(_,content,end)=>content+download('button app-download')+end);
+ html=html.replace('</footer>',download('desktop-install-footer')+'</footer>');
+}
 html=html.replace(/<div class="brand">T(?:<span[^>]*>)?&amp;(?:<\/span>)?Y<\/div>/g,'<div class="brand"><img src="/ty-landing/brand/match-beyond-love-transparent.png?v=20261122-gold" alt="Match Beyond Love" width="1100" height="614" loading="lazy"></div>');
 const report=/(?:plum|vedic)-hero/.test(html)&&path.relative(root,p).includes('/');
 if(report&&!/class="mbl-report"/.test(html))html=html.replace(/<body([^>]*)>/,(_,attrs)=>attrs.includes('class=')?'<body'+attrs.replace(/class="([^"]*)"/,'class="$1 mbl-report"')+'>':'<body class="mbl-report"'+attrs+'>');
