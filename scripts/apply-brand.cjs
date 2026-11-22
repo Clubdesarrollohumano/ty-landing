@@ -14,6 +14,7 @@ html=html.replace(/(<img\b[^>]*\bsrc=")[^"]*(?:ty[-_]logo|TY_logo)[^"]*(")/gi,'$
 html=html.replace(/(<link\b[^>]*rel="(?:icon|apple-touch-icon)"[^>]*href=")[^"]*(")/gi,'$1/ty-landing/brand/match-symbol.png?v=20261122-gold$2');
 html=html.replace(/(<meta\b[^>]*(?:property|name)="(?:og:image|twitter:image)"[^>]*content=")[^"]*(")/gi,'$1https://clubdesarrollohumano.github.io/ty-landing/brand/match-beyond-love-transparent.png?v=20261122-gold$2');
 html=html.replace(/content="#0b0a0e"/g,'content="#0d0316"');
+html=html.replace(/T&(?:amp;)?Y/g,'Match Beyond Love').replace(/Match Beyond Love · Match Beyond Love/gi,'Match Beyond Love');
 if(path.relative(root,p).replaceAll('\\','/').startsWith('revision-2026-10-06/')){
  html=html.replace(/<a\b[^>]*\bdata-desktop-install\b[^>]*>[\s\S]*?<\/a>/g,'').replace(/<link rel="stylesheet" href="\/ty-landing\/brand\/desktop-install\.css[^\"]*">\s*/g,'');
  const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
