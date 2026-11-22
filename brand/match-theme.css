@@ -19,3 +19,6 @@ body.mbl-report footer{background:#1c0a29;color:#f7d995}
 @media(prefers-reduced-motion:reduce){.hero-logo{animation:none!important}}
 @media(forced-colors:active){body,.hero,.light,.pricing,.final,.quotes{background:Canvas}}
 
+
+/* La navegación móvil ocupa su propia línea encima del logo. */
+@media(max-width:640px){body>header:not(.header){position:relative;min-height:54px;padding:14px 28px 8px}body>header:not(.header)+main>.hero{padding-top:10px}}
